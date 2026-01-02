@@ -1,0 +1,1390 @@
+/*--------------------- Theme Color Switcher CSS -------------------*/
+
+#theme_color_switcher {
+	position: fixed;
+	top: 23%;
+	z-index: 9999;
+	width: 0;
+}
+
+.setting_icon:hover {
+	cursor: pointer;
+}
+
+.setting_icon svg {
+	font-size: 36px;
+	color: #ffffff;
+	background-color: #1d44f9;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.under_left {
+	width: 300px;
+	height: 410px;
+	background-color:  #fafafa;
+	overflow-y: auto;
+	box-shadow: 0px 15px 40px 0px rgb(3 3 3 / 25%) !important;
+	-webkit-box-shadow: 0px 15px 40px 0px rgb(3 3 3 / 25%) !important;
+    -moz-box-shadow: 0px 15px 40px 0px rgb(3 3 3 / 25%) !important;
+    -ms-box-shadow: 0px 15px 40px 0px rgb(3 3 3 / 25%) !important;
+    -o-box-shadow: 0px 15px 40px 0px rgb(3 3 3 / 25%) !important;
+	transform: translateX(-350px);
+	-webkit-transform: translateX(-350px);
+	-moz-transform: translateX(-350px);
+	-ms-transform: translateX(-350px);
+	-o-transform: translateX(-350px);
+	transition: all .5s linear;
+	-webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+}
+
+.under_left.out_left {
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+}
+
+.under_left hr {
+	margin: 0;
+}
+
+.color_heading {
+	background-color: #000000;
+	padding: 15px;
+}
+
+.color_heading h4,
+.layout_heading h4,
+.scheme_heading h4 {
+	color: #1d44f9;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+.color_heading h4 {
+	color: #ffffff;
+}
+
+.layout_heading,
+.theme_mode,
+.scheme_heading {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.theme_mode .color_mode {
+	display: inline-block;
+	line-height: 0;
+	margin: 0 5px;
+	padding: 15px;
+	text-transform: capitalize;
+}
+
+.theme_mode #light {
+	color: #000000;
+	background-color: #d5d5d5;
+}
+
+.theme_mode #dark {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.color-picker {
+	overflow: hidden;
+}
+
+.color-picker li {
+	float: left;
+	width: 25%;
+	padding: 0 7px;
+}
+
+.color-picker li .site_color {
+	display: inline-block;
+	width: 100%; 
+	height: 50px; 
+	margin-top: 8px;
+}
+
+.color-picker li .site_color:hover {
+	cursor: pointer;
+}
+
+.color_mode.active {
+	outline: 2px dashed #1d44f9;
+	outline-offset: 2px;
+}
+
+#blue.site_color {
+	background-color: #1d44f9;
+}
+
+#red.site_color {
+	background-color: #ff0000;
+}
+
+#orange.site_color {
+	background-color: #FF6600;
+}
+
+#violet.site_color {
+	background-color: #944fcb;
+}
+
+#magenta.site_color {
+	background-color: #FF00FF;
+}
+
+#teal.site_color {
+	background-color: #008080;
+}
+
+#ruby.site_color {
+	background-color: #E0115F;
+}
+
+#azure.site_color {
+	background-color: #007FFF;
+}
+
+#mint.site_color {
+	background-color: #3EB489;
+}
+
+#yellow.site_color {
+	background-color: #f79a32;
+}
+
+/*----------------------------- Media Query -----------------------------*/
+
+@media (max-width: 991px) {
+	.dark-mode .sidebar_icon svg:hover {
+		color: #ffffff !important;
+	}
+	#red .sidebar_icon svg {
+		color: #ff0000;
+	}
+	#orange .sidebar_icon svg {
+		color: #FF6600;
+	}
+	#violet .sidebar_icon svg {
+		color: #944fcb;
+	}
+	#magenta .sidebar_icon svg {
+		color: #FF00FF;
+	}
+	#teal .sidebar_icon svg {
+		color: #008080;
+	}
+	#ruby .sidebar_icon svg {
+		color: #E0115F;
+	}
+	#azure .sidebar_icon svg {
+		color: #007FFF;
+	}
+	#mint .sidebar_icon svg {
+		color: #3EB489;
+	}
+	#yellow .sidebar_icon svg {
+		color: #f79a32;
+	}
+}
+
+@media (max-width: 767px) {
+	.color_heading {
+		padding: 10px;
+	}
+	.color_heading h4 {
+		font-size: 22px;
+	}
+	.under_left {
+		width: 270px;
+		height: 390px;
+	}
+	.setting_icon svg {
+		font-size: 32px;
+		padding: 7px;
+	}
+}
+
+@media (max-width: 450px) {
+	.color-picker li .site_color {
+		height: 40px;
+	}
+	.under_left {
+		width: 215px;
+		height: 360px;
+	}
+}
+
+/*----------------------------- Dark Mode CSS -----------------------------*/
+
+
+	body.dark-mode,
+	.dark-mode .testimonial,
+	.dark-mode .header_top .contact_information {
+		background-color: #0c0c0c;
+	}
+
+	.dark-mode .site_header,
+	.dark-mode .fixed-header,
+	.dark-mode .bg_img_buyer_seller,
+	.dark-mode .bg_img_testimonial,
+	.dark-mode .agent .agent_detail:after,
+	.dark-mode .estimate_inner_section,
+	.dark-mode #realock_info,
+	.dark-mode #image_slider_section {
+		background-color: #000000;
+	}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+.dark-mode .header_top .contact_information,
+.dark-mode .navbar-expand-lg .navbar-nav .nav-link,
+.dark-mode .navbar-light .navbar-toggler,
+.dark-mode .navbar-expand-lg .offcanvas-header .btn-close,
+.dark-mode .mobile_sub_menu .sub-item .nav-link:hover,
+.dark-mode .property .facilities span,
+.dark-mode .agent .background .agent_description .agent-title:hover,
+.dark-mode .newsletter_form .form_container input:focus,
+.dark-mode .info_heading h1, 
+.dark-mode .para_info p span,
+.dark-mode .client_name h4,
+.dark-mode .search_form_realock .city_icon .svg_icon,
+.dark-mode .search_form_realock .filter_icon .svg_icon svg,
+.dark-mode .homepage_2_dark_mode_search .search_form_realock .realock_form_placeholder .form_placeholder:focus,
+.dark-mode .site_header .site_logo,
+.dark-mode .agent .background .agent_description .agent-title:hover,
+.dark-mode .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	color: #ffffff;
+}
+
+.dark-mode .navbar-expand-lg .navbar-nav .dropdown-menu .nav-link,
+.dark-mode .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+.dark-mode .newsletter_form .form_container input:focus {
+	color: #000000;
+}
+
+.heading_for_about_slider h2,
+.dark-mode .navbar-expand-lg .navbar-nav .dropdown-menu .nav-link:hover {
+	color: #1d44f9;
+}
+
+.dark-mode .testimonial_icon svg {
+	color: #909090;
+}
+
+.dark-mode .buyer_seller_para p {
+	color: #888888;
+}
+
+.dark-mode .header_top .contact_information {
+	border: 1px solid #0c0c0c;
+}
+
+.dark-mode .navbar-light .navbar-toggler,
+.dark-mode .search_form_realock .filter_icon .svg_icon {
+	border: 2px solid #242424;
+}
+
+.dark-mode .bg_img_buyer_seller,
+.dark-mode .bg_img_testimonial {
+	background-image: url(../images/house-images/dark-bg-house.png);
+}
+
+.dark-mode .estimate_inner_section:before {
+	background-image: url(../images/background-shape/dark-bg-shape-2.png);
+}
+
+.dark-mode .estimate_inner_section:after {
+	background-image: url(../images/background-shape/dark-bg-shape-3.png);
+}
+
+.dark-mode .image_slider:before {
+	background-image: url(../images/background-shape/dark-bg-shape-2.png);
+}
+
+.dark-mode .image_slider:after {
+	background-image: url(../images/background-shape/dark-bg-shape-3.png);
+}
+
+.dark-mode .fixed-header {
+	box-shadow: 0px 1px 5px #2a2a2a;
+	-webkit-box-shadow: 0px 1px 5px #2a2a2a;
+    -moz-box-shadow: 0px 1px 5px #2a2a2a;
+    -ms-box-shadow: 0px 1px 5px #2a2a2a;
+    -o-box-shadow: 0px 1px 5px #2a2a2a;
+}
+
+.dark-mode .agent .agent_detail:hover::after {
+	box-shadow: 5px 5px 7px #2c2c2c;
+	-webkit-box-shadow: 5px 5px 7px #2c2c2c;
+    -moz-box-shadow: 5px 5px 7px #2c2c2c;
+    -ms-box-shadow: 5px 5px 7px #2c2c2c;
+    -o-box-shadow: 5px 5px 7px #2c2c2c;
+}
+
+.dark-mode .search_form_realock {
+	background-color: #0c0c0c;
+	box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+	-webkit-box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+    -moz-box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+    -ms-box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+    -o-box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+}
+
+.dark-mode .search_form_realock .realock_form_placeholder .form_placeholder{
+	color: #ffffff;
+	background-color: #0c0c0c;
+}
+
+/*----------------------------- Red Color CSS -----------------------------*/
+
+#red .heading_for_about_slider h2,
+#red .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#red .site_header .site_logo span,
+#red .property .property-title:hover,
+#red .buyer_seller_title h5,
+#red .testimonial_inner_section .slick-prev:before,
+#red .testimonial_inner_section .slick-next:before,
+#red .agent .background .agent_description .agent-title,
+#red .agent_social .social_icons:hover,
+#red .site_footer .site_logo span,
+#red .footer_top .column_2 .site_contact_us a:hover,
+#red .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#red .site_about .column_2 .menu_item .menu_link:hover,
+#red .footer_bottom .column_2 a:hover,
+#red .mobile_sidebar_nav .nav-item .nav-link:hover,
+#red .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#red .mobile_sub_menu .sub-item .nav-link {
+	color: #ff0000;
+}
+
+#red .property .property-image:hover .property-price, 
+#red .testimonial_inner_section .slick-prev:hover,
+#red .testimonial_inner_section .slick-next:hover,
+#red .image_slider .slick-prev:hover,
+#red .image_slider .slick-next:hover, 
+#red .buyer_seller_top_inner_section .left_column:after,
+#red .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #ff0000;
+}
+
+#red .navbar-expand-lg .navbar-nav .nav-link:hover,
+#red .dropdown-menu li .nav-link.active,
+#red .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #ff0000 !important;
+}
+
+#red .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#red .testimonial_inner_section .slick-prev,
+#red .testimonial_inner_section .slick-next {
+	border: 2px solid #ff0000;
+}
+
+#red .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#red .search_form_realock .realock_form_button .form_submit_button,
+#red .btn {
+	background-color: #ff0000;
+	border: 3px solid #ff0000;
+}
+
+#red .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#red .newsletter_form .form_container input:focus {
+	outline: 2px solid #ff0000;
+}
+
+#red .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#red .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #ff0000;
+	background-color: #ffffff;
+	border: 3px solid #ff0000;
+}
+
+#red .testimonial_inner_section .slick-prev:hover::before,
+#red .testimonial_inner_section .slick-next:hover::before,
+#red.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#red .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#red .offcanvas {
+	background-color: #ff0000 !important;
+}
+
+#red .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #ff0000 !important;
+}
+
+#red .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #ff0000;
+}
+
+#red .btn:hover {
+	color: #ff0000;
+	background-color: #ffffff;
+}
+
+#red .sidebar-nav .nav-item .nav-link:hover {
+	color: #ff0000 !important;
+	background-color: #ffffff !important;
+}
+
+#red .navbar-light .navbar-toggler:hover {
+	color: #ff0000 !important;
+	border: 2px solid #ff0000 !important;
+}
+
+#red .slick-active button:before {
+	color: #ff0000 !important;
+	outline: 2px solid #ff0000;
+}
+
+#red .newsletter_form .form_container .form_submit_button {
+	background-color: #ff0000;
+	outline: 2px solid #ff0000;
+}
+
+#red .newsletter_form .form_container .form_submit_button:hover {
+	color: #ff0000;
+	outline: 2px solid #ff0000;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Orange Color CSS -----------------------------*/
+
+#orange .heading_for_about_slider h2,
+#orange .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#orange .site_header .site_logo span,
+#orange .property .property-title:hover,
+#orange .buyer_seller_title h5,
+#orange .testimonial_inner_section .slick-prev:before,
+#orange .testimonial_inner_section .slick-next:before,
+#orange .agent .background .agent_description .agent-title,
+#orange .agent_social .social_icons:hover,
+#orange .site_footer .site_logo span,
+#orange .footer_top .column_2 .site_contact_us a:hover,
+#orange .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#orange .site_about .column_2 .menu_item .menu_link:hover,
+#orange .footer_bottom .column_2 a:hover,
+#orange .mobile_sidebar_nav .nav-item .nav-link:hover,
+#orange .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#orange .mobile_sub_menu .sub-item .nav-link {
+	color: #FF6600;
+}
+
+#orange .property .property-image:hover .property-price, 
+#orange .testimonial_inner_section .slick-prev:hover,
+#orange .testimonial_inner_section .slick-next:hover,
+#orange .image_slider .slick-prev:hover,
+#orange .image_slider .slick-next:hover, 
+#orange .buyer_seller_top_inner_section .left_column:after,
+#orange .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #FF6600;
+}
+
+#orange .navbar-expand-lg .navbar-nav .nav-link:hover,
+#orange .dropdown-menu li .nav-link.active,
+#orange .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #FF6600 !important;
+}
+
+#orange .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#orange .testimonial_inner_section .slick-prev,
+#orange .testimonial_inner_section .slick-next {
+	border: 2px solid #FF6600;
+}
+
+#orange .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#orange .search_form_realock .realock_form_button .form_submit_button,
+#orange .btn {
+	background-color: #FF6600;
+	border: 3px solid #FF6600;
+}
+
+#orange .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#orange .newsletter_form .form_container input:focus {
+	outline: 2px solid #FF6600;
+}
+
+#orange .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#orange .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #FF6600;
+	background-color: #ffffff;
+	border: 3px solid #FF6600;
+}
+
+#orange .testimonial_inner_section .slick-prev:hover::before,
+#orange .testimonial_inner_section .slick-next:hover::before,
+#orange.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#orange .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#orange .offcanvas {
+	background-color: #FF6600 !important;
+}
+
+#orange .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #FF6600 !important;
+}
+
+#orange .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #FF6600;
+}
+
+#orange .btn:hover {
+	color: #FF6600;
+	background-color: #ffffff;
+}
+
+#orange .sidebar-nav .nav-item .nav-link:hover {
+	color: #FF6600 !important;
+	background-color: #ffffff !important;
+}
+
+#orange .navbar-light .navbar-toggler:hover {
+	color: #FF6600 !important;
+	border: 2px solid #FF6600 !important;
+}
+
+#orange .slick-active button:before {
+	color: #FF6600 !important;
+	outline: 2px solid #FF6600;
+}
+
+#orange .newsletter_form .form_container .form_submit_button {
+	background-color: #FF6600;
+	outline: 2px solid #FF6600;
+}
+
+#orange .newsletter_form .form_container .form_submit_button:hover {
+	color: #FF6600;
+	outline: 2px solid #FF6600;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Violet Color CSS -----------------------------*/
+
+#violet .heading_for_about_slider h2,
+#violet .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#violet .site_header .site_logo span,
+#violet .property .property-title:hover,
+#violet .buyer_seller_title h5,
+#violet .testimonial_inner_section .slick-prev:before,
+#violet .testimonial_inner_section .slick-next:before,
+#violet .agent .background .agent_description .agent-title,
+#violet .agent_social .social_icons:hover,
+#violet .site_footer .site_logo span,
+#violet .footer_top .column_2 .site_contact_us a:hover,
+#violet .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#violet .site_about .column_2 .menu_item .menu_link:hover,
+#violet .footer_bottom .column_2 a:hover,
+#violet .mobile_sidebar_nav .nav-item .nav-link:hover,
+#violet .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#violet .mobile_sub_menu .sub-item .nav-link {
+	color: #944fcb;
+}
+
+#violet .property .property-image:hover .property-price, 
+#violet .testimonial_inner_section .slick-prev:hover,
+#violet .testimonial_inner_section .slick-next:hover,
+#violet .image_slider .slick-prev:hover,
+#violet .image_slider .slick-next:hover, 
+#violet .buyer_seller_top_inner_section .left_column:after,
+#violet .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #944fcb;
+}
+
+#violet .navbar-expand-lg .navbar-nav .nav-link:hover,
+#violet .dropdown-menu li .nav-link.active,
+#violet .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #944fcb !important;
+}
+
+#violet .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#violet .testimonial_inner_section .slick-prev,
+#violet .testimonial_inner_section .slick-next {
+	border: 2px solid #944fcb;
+}
+
+#violet .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#violet .search_form_realock .realock_form_button .form_submit_button,
+#violet .btn {
+	background-color: #944fcb;
+	border: 3px solid #944fcb;
+}
+
+#violet .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#violet .newsletter_form .form_container input:focus {
+	outline: 2px solid #944fcb;
+}
+
+#violet .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#violet .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #944fcb;
+	background-color: #ffffff;
+	border: 3px solid #944fcb;
+}
+
+#violet .testimonial_inner_section .slick-prev:hover::before,
+#violet .testimonial_inner_section .slick-next:hover::before,
+#violet.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#violet .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#violet .offcanvas {
+	background-color: #944fcb !important;
+}
+
+#violet .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #944fcb !important;
+}
+
+#violet .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #944fcb;
+}
+
+#violet .btn:hover {
+	color: #944fcb;
+	background-color: #ffffff;
+}
+
+#violet .sidebar-nav .nav-item .nav-link:hover {
+	color: #944fcb !important;
+	background-color: #ffffff !important;
+}
+
+#violet .navbar-light .navbar-toggler:hover {
+	color: #944fcb !important;
+	border: 2px solid #944fcb !important;
+}
+
+#violet .slick-active button:before {
+	color: #944fcb !important;
+	outline: 2px solid #944fcb;
+}
+
+#violet .newsletter_form .form_container .form_submit_button {
+	background-color: #944fcb;
+	outline: 2px solid #944fcb;
+}
+
+#violet .newsletter_form .form_container .form_submit_button:hover {
+	color: #944fcb;
+	outline: 2px solid #944fcb;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Magenta Color CSS -----------------------------*/
+
+#magenta .heading_for_about_slider h2,
+#magenta .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#magenta .site_header .site_logo span,
+#magenta .property .property-title:hover,
+#magenta .buyer_seller_title h5,
+#magenta .testimonial_inner_section .slick-prev:before,
+#magenta .testimonial_inner_section .slick-next:before,
+#magenta .agent .background .agent_description .agent-title,
+#magenta .agent_social .social_icons:hover,
+#magenta .site_footer .site_logo span,
+#magenta .footer_top .column_2 .site_contact_us a:hover,
+#magenta .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#magenta .site_about .column_2 .menu_item .menu_link:hover,
+#magenta .footer_bottom .column_2 a:hover,
+#magenta .mobile_sidebar_nav .nav-item .nav-link:hover,
+#magenta .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#magenta .mobile_sub_menu .sub-item .nav-link {
+	color: #FF00FF;
+}
+
+#magenta .property .property-image:hover .property-price, 
+#magenta .testimonial_inner_section .slick-prev:hover,
+#magenta .testimonial_inner_section .slick-next:hover,
+#magenta .image_slider .slick-prev:hover,
+#magenta .image_slider .slick-next:hover, 
+#magenta .buyer_seller_top_inner_section .left_column:after,
+#magenta .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #FF00FF;
+}
+
+#magenta .navbar-expand-lg .navbar-nav .nav-link:hover,
+#magenta .dropdown-menu li .nav-link.active,
+#magenta .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #FF00FF !important;
+}
+
+#magenta .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#magenta .testimonial_inner_section .slick-prev,
+#magenta .testimonial_inner_section .slick-next {
+	border: 2px solid #FF00FF;
+}
+
+#magenta .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#magenta .search_form_realock .realock_form_button .form_submit_button,
+#magenta .btn {
+	background-color: #FF00FF;
+	border: 3px solid #FF00FF;
+}
+
+#magenta .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#magenta .newsletter_form .form_container input:focus {
+	outline: 2px solid #FF00FF;
+}
+
+#magenta .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#magenta .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #FF00FF;
+	background-color: #ffffff;
+	border: 3px solid #FF00FF;
+}
+
+#magenta .testimonial_inner_section .slick-prev:hover::before,
+#magenta .testimonial_inner_section .slick-next:hover::before,
+#magenta.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#magenta .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#magenta .offcanvas {
+	background-color: #FF00FF !important;
+}
+
+#magenta .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #FF00FF !important;
+}
+
+#magenta .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #FF00FF;
+}
+
+#magenta .btn:hover {
+	color: #FF00FF;
+	background-color: #ffffff;
+}
+
+#magenta .sidebar-nav .nav-item .nav-link:hover {
+	color: #FF00FF !important;
+	background-color: #ffffff !important;
+}
+
+#magenta .navbar-light .navbar-toggler:hover {
+	color: #FF00FF !important;
+	border: 2px solid #FF00FF !important;
+}
+
+#magenta .slick-active button:before {
+	color: #FF00FF !important;
+	outline: 2px solid #FF00FF;
+}
+
+#magenta .newsletter_form .form_container .form_submit_button {
+	background-color: #FF00FF;
+	outline: 2px solid #FF00FF;
+}
+
+#magenta .newsletter_form .form_container .form_submit_button:hover {
+	color: #FF00FF;
+	outline: 2px solid #FF00FF;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Teal Color CSS -----------------------------*/
+
+#teal .heading_for_about_slider h2,
+#teal .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#teal .site_header .site_logo span,
+#teal .property .property-title:hover,
+#teal .buyer_seller_title h5,
+#teal .testimonial_inner_section .slick-prev:before,
+#teal .testimonial_inner_section .slick-next:before,
+#teal .agent .background .agent_description .agent-title,
+#teal .agent_social .social_icons:hover,
+#teal .site_footer .site_logo span,
+#teal .footer_top .column_2 .site_contact_us a:hover,
+#teal .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#teal .site_about .column_2 .menu_item .menu_link:hover,
+#teal .footer_bottom .column_2 a:hover,
+#teal .mobile_sidebar_nav .nav-item .nav-link:hover,
+#teal .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#teal .mobile_sub_menu .sub-item .nav-link {
+	color: #008080;
+}
+
+#teal .property .property-image:hover .property-price, 
+#teal .testimonial_inner_section .slick-prev:hover,
+#teal .testimonial_inner_section .slick-next:hover,
+#teal .image_slider .slick-prev:hover,
+#teal .image_slider .slick-next:hover, 
+#teal .buyer_seller_top_inner_section .left_column:after,
+#teal .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #008080;
+}
+
+#teal .navbar-expand-lg .navbar-nav .nav-link:hover,
+#teal .dropdown-menu li .nav-link.active,
+#teal .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #008080 !important;
+}
+
+#teal .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#teal .testimonial_inner_section .slick-prev,
+#teal .testimonial_inner_section .slick-next {
+	border: 2px solid #008080;
+}
+
+#teal .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#teal .search_form_realock .realock_form_button .form_submit_button,
+#teal .btn {
+	background-color: #008080;
+	border: 3px solid #008080;
+}
+
+#teal .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#teal .newsletter_form .form_container input:focus {
+	outline: 2px solid #008080;
+}
+
+#teal .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#teal .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #008080;
+	background-color: #ffffff;
+	border: 3px solid #008080;
+}
+
+#teal .testimonial_inner_section .slick-prev:hover::before,
+#teal .testimonial_inner_section .slick-next:hover::before,
+#teal.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#teal .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#teal .offcanvas {
+	background-color: #008080 !important;
+}
+
+#teal .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #008080 !important;
+}
+
+#teal .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #008080;
+}
+
+#teal .btn:hover {
+	color: #008080;
+	background-color: #ffffff;
+}
+
+#teal .sidebar-nav .nav-item .nav-link:hover {
+	color: #008080 !important;
+	background-color: #ffffff !important;
+}
+
+#teal .navbar-light .navbar-toggler:hover {
+	color: #008080 !important;
+	border: 2px solid #008080 !important;
+}
+
+#teal .slick-active button:before {
+	color: #008080 !important;
+	outline: 2px solid #008080;
+}
+
+#teal .newsletter_form .form_container .form_submit_button {
+	background-color: #008080;
+	outline: 2px solid #008080;
+}
+
+#teal .newsletter_form .form_container .form_submit_button:hover {
+	color: #008080;
+	outline: 2px solid #008080;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Ruby Color CSS -----------------------------*/
+
+#ruby .heading_for_about_slider h2,
+#ruby .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#ruby .site_header .site_logo span,
+#ruby .property .property-title:hover,
+#ruby .buyer_seller_title h5,
+#ruby .testimonial_inner_section .slick-prev:before,
+#ruby .testimonial_inner_section .slick-next:before,
+#ruby .agent .background .agent_description .agent-title,
+#ruby .agent_social .social_icons:hover,
+#ruby .site_footer .site_logo span,
+#ruby .footer_top .column_2 .site_contact_us a:hover,
+#ruby .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#ruby .site_about .column_2 .menu_item .menu_link:hover,
+#ruby .footer_bottom .column_2 a:hover,
+#ruby .mobile_sidebar_nav .nav-item .nav-link:hover,
+#ruby .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#ruby .mobile_sub_menu .sub-item .nav-link {
+	color: #E0115F;
+}
+
+#ruby .property .property-image:hover .property-price, 
+#ruby .testimonial_inner_section .slick-prev:hover,
+#ruby .testimonial_inner_section .slick-next:hover,
+#ruby .image_slider .slick-prev:hover,
+#ruby .image_slider .slick-next:hover, 
+#ruby .buyer_seller_top_inner_section .left_column:after,
+#ruby .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #E0115F;
+}
+
+#ruby .navbar-expand-lg .navbar-nav .nav-link:hover,
+#ruby .dropdown-menu li .nav-link.active,
+#ruby .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #E0115F !important;
+}
+
+#ruby .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#ruby .testimonial_inner_section .slick-prev,
+#ruby .testimonial_inner_section .slick-next {
+	border: 2px solid #E0115F;
+}
+
+#ruby .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#ruby .search_form_realock .realock_form_button .form_submit_button,
+#ruby .btn {
+	background-color: #E0115F;
+	border: 3px solid #E0115F;
+}
+
+#ruby .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#ruby .newsletter_form .form_container input:focus {
+	outline: 2px solid #E0115F;
+}
+
+#ruby .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#ruby .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #E0115F;
+	background-color: #ffffff;
+	border: 3px solid #E0115F;
+}
+
+#ruby .testimonial_inner_section .slick-prev:hover::before,
+#ruby .testimonial_inner_section .slick-next:hover::before,
+#ruby.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#ruby .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#ruby .offcanvas {
+	background-color: #E0115F !important;
+}
+
+#ruby .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #E0115F !important;
+}
+
+#ruby .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #E0115F;
+}
+
+#ruby .btn:hover {
+	color: #E0115F;
+	background-color: #ffffff;
+}
+
+#ruby .sidebar-nav .nav-item .nav-link:hover {
+	color: #E0115F !important;
+	background-color: #ffffff !important;
+}
+
+#ruby .navbar-light .navbar-toggler:hover {
+	color: #E0115F !important;
+	border: 2px solid #E0115F !important;
+}
+
+#ruby .slick-active button:before {
+	color: #E0115F !important;
+	outline: 2px solid #E0115F;
+}
+
+#ruby .newsletter_form .form_container .form_submit_button {
+	background-color: #E0115F;
+	outline: 2px solid #E0115F;
+}
+
+#ruby .newsletter_form .form_container .form_submit_button:hover {
+	color: #E0115F;
+	outline: 2px solid #E0115F;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Azure Color CSS -----------------------------*/
+
+#azure .heading_for_about_slider h2,
+#azure .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#azure .site_header .site_logo span,
+#azure .property .property-title:hover,
+#azure .buyer_seller_title h5,
+#azure .testimonial_inner_section .slick-prev:before,
+#azure .testimonial_inner_section .slick-next:before,
+#azure .agent .background .agent_description .agent-title,
+#azure .agent_social .social_icons:hover,
+#azure .site_footer .site_logo span,
+#azure .footer_top .column_2 .site_contact_us a:hover,
+#azure .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#azure .site_about .column_2 .menu_item .menu_link:hover,
+#azure .footer_bottom .column_2 a:hover,
+#azure .mobile_sidebar_nav .nav-item .nav-link:hover,
+#azure .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#azure .mobile_sub_menu .sub-item .nav-link {
+	color: #007FFF;
+}
+
+#azure .property .property-image:hover .property-price, 
+#azure .testimonial_inner_section .slick-prev:hover,
+#azure .testimonial_inner_section .slick-next:hover,
+#azure .image_slider .slick-prev:hover,
+#azure .image_slider .slick-next:hover, 
+#azure .buyer_seller_top_inner_section .left_column:after,
+#azure .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #007FFF;
+}
+
+#azure .navbar-expand-lg .navbar-nav .nav-link:hover,
+#azure .dropdown-menu li .nav-link.active,
+#azure .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #007FFF !important;
+}
+
+#azure .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#azure .testimonial_inner_section .slick-prev,
+#azure .testimonial_inner_section .slick-next {
+	border: 2px solid #007FFF;
+}
+
+#azure .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#azure .search_form_realock .realock_form_button .form_submit_button,
+#azure .btn {
+	background-color: #007FFF;
+	border: 3px solid #007FFF;
+}
+
+#azure .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#azure .newsletter_form .form_container input:focus {
+	outline: 2px solid #007FFF;
+}
+
+#azure .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#azure .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #007FFF;
+	background-color: #ffffff;
+	border: 3px solid #007FFF;
+}
+
+#azure .testimonial_inner_section .slick-prev:hover::before,
+#azure .testimonial_inner_section .slick-next:hover::before,
+#azure.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#azure .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#azure .offcanvas {
+	background-color: #007FFF !important;
+}
+
+#azure .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #007FFF !important;
+}
+
+#azure .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #007FFF;
+}
+
+#azure .btn:hover {
+	color: #007FFF;
+	background-color: #ffffff;
+}
+
+#azure .sidebar-nav .nav-item .nav-link:hover {
+	color: #007FFF !important;
+	background-color: #ffffff !important;
+}
+
+#azure .navbar-light .navbar-toggler:hover {
+	color: #007FFF !important;
+	border: 2px solid #007FFF !important;
+}
+
+#azure .slick-active button:before {
+	color: #007FFF !important;
+	outline: 2px solid #007FFF;
+}
+
+#azure .newsletter_form .form_container .form_submit_button {
+	background-color: #007FFF;
+	outline: 2px solid #007FFF;
+}
+
+#azure .newsletter_form .form_container .form_submit_button:hover {
+	color: #007FFF;
+	outline: 2px solid #007FFF;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Mint Color CSS -----------------------------*/
+
+#mint .heading_for_about_slider h2,
+#mint .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#mint .site_header .site_logo span,
+#mint .property .property-title:hover,
+#mint .buyer_seller_title h5,
+#mint .testimonial_inner_section .slick-prev:before,
+#mint .testimonial_inner_section .slick-next:before,
+#mint .agent .background .agent_description .agent-title,
+#mint .agent_social .social_icons:hover,
+#mint .site_footer .site_logo span,
+#mint .footer_top .column_2 .site_contact_us a:hover,
+#mint .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#mint .site_about .column_2 .menu_item .menu_link:hover,
+#mint .footer_bottom .column_2 a:hover,
+#mint .mobile_sidebar_nav .nav-item .nav-link:hover,
+#mint .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#mint .mobile_sub_menu .sub-item .nav-link {
+	color: #3EB489;
+}
+
+#mint .property .property-image:hover .property-price, 
+#mint .testimonial_inner_section .slick-prev:hover,
+#mint .testimonial_inner_section .slick-next:hover,
+#mint .image_slider .slick-prev:hover,
+#mint .image_slider .slick-next:hover, 
+#mint .buyer_seller_top_inner_section .left_column:after,
+#mint .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #3EB489;
+}
+
+#mint .navbar-expand-lg .navbar-nav .nav-link:hover,
+#mint .dropdown-menu li .nav-link.active,
+#mint .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #3EB489 !important;
+}
+
+#mint .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#mint .testimonial_inner_section .slick-prev,
+#mint .testimonial_inner_section .slick-next {
+	border: 2px solid #3EB489;
+}
+
+#mint .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#mint .search_form_realock .realock_form_button .form_submit_button,
+#mint .btn {
+	background-color: #3EB489;
+	border: 3px solid #3EB489;
+}
+
+#mint .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#mint .newsletter_form .form_container input:focus {
+	outline: 2px solid #3EB489;
+}
+
+#mint .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#mint .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #3EB489;
+	background-color: #ffffff;
+	border: 3px solid #3EB489;
+}
+
+#mint .testimonial_inner_section .slick-prev:hover::before,
+#mint .testimonial_inner_section .slick-next:hover::before,
+#mint.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#mint .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#mint .offcanvas {
+	background-color: #3EB489 !important;
+}
+
+#mint .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #3EB489 !important;
+}
+
+#mint .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #3EB489;
+}
+
+#mint .btn:hover {
+	color: #3EB489;
+	background-color: #ffffff;
+}
+
+#mint .sidebar-nav .nav-item .nav-link:hover {
+	color: #3EB489 !important;
+	background-color: #ffffff !important;
+}
+
+#mint .navbar-light .navbar-toggler:hover {
+	color: #3EB489 !important;
+	border: 2px solid #3EB489 !important;
+}
+
+#mint .slick-active button:before {
+	color: #3EB489 !important;
+	outline: 2px solid #3EB489;
+}
+
+#mint .newsletter_form .form_container .form_submit_button {
+	background-color: #3EB489;
+	outline: 2px solid #3EB489;
+}
+
+#mint .newsletter_form .form_container .form_submit_button:hover {
+	color: #3EB489;
+	outline: 2px solid #3EB489;
+	background-color: #ffffff;
+}
+
+/*----------------------------- Yellow Color CSS -----------------------------*/
+
+#yellow .heading_for_about_slider h2,
+#yellow .search_form_for_about_slider .filter_icon .svg_icon:hover svg,
+#yellow .site_header .site_logo span,
+#yellow .property .property-title:hover,
+#yellow .buyer_seller_title h5,
+#yellow .testimonial_inner_section .slick-prev:before,
+#yellow .testimonial_inner_section .slick-next:before,
+#yellow .agent .background .agent_description .agent-title,
+#yellow .agent_social .social_icons:hover,
+#yellow .site_footer .site_logo span,
+#yellow .footer_top .column_2 .site_contact_us a:hover,
+#yellow .footer_middle .column_1 .site_social_media .social_media_icons a:hover,
+#yellow .site_about .column_2 .menu_item .menu_link:hover,
+#yellow .footer_bottom .column_2 a:hover,
+#yellow .mobile_sidebar_nav .nav-item .nav-link:hover,
+#yellow .mobile_sidebar_nav .nav-item .nav-link:hover + .fa-plus,
+#yellow .mobile_sub_menu .sub-item .nav-link {
+	color: #f79a32;
+}
+
+#yellow .property .property-image:hover .property-price, 
+#yellow .testimonial_inner_section .slick-prev:hover,
+#yellow .testimonial_inner_section .slick-next:hover,
+#yellow .image_slider .slick-prev:hover,
+#yellow .image_slider .slick-next:hover, 
+#yellow .buyer_seller_top_inner_section .left_column:after,
+#yellow .buyer_seller_bottom_inner_section .right_column:after {
+	background-color: #f79a32;
+}
+
+#yellow .navbar-expand-lg .navbar-nav .nav-link:hover,
+#yellow .dropdown-menu li .nav-link.active,
+#yellow .search_form_realock .filter_icon .svg_icon:hover svg {
+	color: #f79a32 !important;
+}
+
+#yellow .search_form_for_about_slider .filter_icon .svg_icon:hover,
+#yellow .testimonial_inner_section .slick-prev,
+#yellow .testimonial_inner_section .slick-next {
+	border: 2px solid #f79a32;
+}
+
+#yellow .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider,
+#yellow .search_form_realock .realock_form_button .form_submit_button,
+#yellow .btn {
+	background-color: #f79a32;
+	border: 3px solid #f79a32;
+}
+
+#yellow .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder:focus,
+#yellow .newsletter_form .form_container input:focus {
+	outline: 2px solid #f79a32;
+}
+
+#yellow .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider:hover,
+#yellow .search_form_realock .realock_form_button .form_submit_button:hover {
+	color: #f79a32;
+	background-color: #ffffff;
+	border: 3px solid #f79a32;
+}
+
+#yellow .testimonial_inner_section .slick-prev:hover::before,
+#yellow .testimonial_inner_section .slick-next:hover::before,
+#yellow.dark-mode .agent .background .agent_description .agent-title:hover {
+	color: #ffffff !important;
+}
+
+#yellow .agent .background .agent_description .agent-title:hover { 
+	color: #000000 !important;
+}
+
+#yellow .offcanvas {
+	background-color: #f79a32 !important;
+}
+
+#yellow .search_form_realock .filter_icon .svg_icon:hover {
+	border: 2px solid #f79a32 !important;
+}
+
+#yellow .search_form_realock .realock_form_placeholder .form_placeholder:focus {
+	outline: 2px solid #f79a32;
+}
+
+#yellow .btn:hover {
+	color: #f79a32;
+	background-color: #ffffff;
+}
+
+#yellow .sidebar-nav .nav-item .nav-link:hover {
+	color: #f79a32 !important;
+	background-color: #ffffff !important;
+}
+
+#yellow .navbar-light .navbar-toggler:hover {
+	color: #f79a32 !important;
+	border: 2px solid #f79a32 !important;
+}
+
+#yellow .slick-active button:before {
+	color: #f79a32 !important;
+	outline: 2px solid #f79a32;
+}
+
+#yellow .newsletter_form .form_container .form_submit_button {
+	background-color: #f79a32;
+	outline: 2px solid #f79a32;
+}
+
+#yellow .newsletter_form .form_container .form_submit_button:hover {
+	color: #f79a32;
+	outline: 2px solid #f79a32;
+	background-color: #ffffff;
+}

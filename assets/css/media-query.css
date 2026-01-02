@@ -1,0 +1,927 @@
+@media (max-width:1500px) {
+    /* Realock Slider Section */
+    .about_slider .info_about_slider {
+        padding-top: 100px;
+        padding-bottom: 210px;
+    }
+    .about_slider .bottom {
+        padding-bottom: 140px;
+    }
+    .slick-dots {
+        bottom: 40px !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    /* Buyer & Seller Section */
+    .buyer_seller_top_inner_section .left_column:after {
+        display: none;
+    }
+    .buyer_seller_bottom_inner_section .right_column:after {
+        display: none;
+    }
+    /* Estimate Section */
+    .estimate_inner_section:before {
+        display: none;
+    }
+    .estimate_inner_section:after {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .mt-100 {
+        margin-top: 80px;
+    }
+    .pt-80 {
+        padding-top: 60px;
+    }
+    /* Realock Slider Section */
+    .heading_for_about_slider h2 {
+        font-size: 55px;
+        line-height: 70px;
+        padding: 10px 0px;
+    }
+    .para_for_about_slider {
+        padding-right: 0;
+    }
+    .para_for_about_slider p {
+        font-size: 17px;
+    }
+    .search_form_for_about_slider .filter_icon {
+        margin-right: 20px;
+    }
+    .about_slider .info_about_slider {
+        padding-top: 40px;
+        padding-bottom: 230px;
+    }
+    .about_slider .bottom {
+        padding-bottom: 120px;
+    }
+    .about_slider .top_realock_slider {
+        margin-bottom: 0px;
+    }
+    .bottom_realock_slider {
+        max-width: 960px;
+        padding: 0 12px;
+        top: 55%;
+    }
+    /* Header Section */
+    .site_header .container .logo img {
+        vertical-align: initial;
+    }
+    .navbar-expand-lg .navbar-nav {
+        align-items: center;
+        padding: 20px 0px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 15px 13px;
+    }
+    .header_button {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* About Section */
+    .bg_img_about {
+        padding: 50px 0px;
+    }
+    /* property Listing Section */
+    #property-listings .slick-list {
+        margin: 0 -10px;
+    }
+    .property {
+        padding: 0 10px;
+    }
+    .property .property-title {
+        font-size: 27px;
+    }
+    .property .property-address {
+        font-size: 17px;
+    }
+    .property .facilities p {
+        font-size: 16px;
+    }
+    .property .facilities p span {
+        font-size: 18px;
+    }
+    /* Buyer & Seller Section */
+    .bg_img_buyer_seller {
+        padding: 70px 0px;
+    }
+    #buyer_seller_section .img_shadow {
+        width: 100%;
+    }
+    .buyer_seller_top_inner_section .right_column {
+        padding-left: 30px;
+    }
+    .buyer_seller_top_inner_section .right_column .buyer_seller_para p {
+        width: 100%;
+    }
+    .buyer_seller_bottom_inner_section .left_column {
+        padding-left: 15px;
+    }
+    .buyer_seller_bottom_inner_section .left_column .buyer_seller_para p {
+        width: 100%;
+    }
+    /* Category section */
+    .category_inner_section {
+        margin: 0 -10px;
+        margin-top: 30px;
+    }
+    .category_inner_section .category_column {
+        padding: 0 10px;
+    }
+    /* testimonial Section */
+    .bg_img_testimonial {
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    .testimonial_inner_section {
+        padding-top: 40px;
+    }
+    .testimonial_inner_section .slick-list {
+        margin: 0 -10px;
+    }
+    .client_testimonials {
+        padding: 20px 10px 40px 10px;
+    }
+    /* Agent Section */
+    .agent .foreground .agent-image img {
+        max-width: 240px;
+    }
+    .agent_social {
+        bottom: 15px;
+        right: 20px;
+    }
+    .agent .agent_detail:after {
+        height: 85%;
+    }
+    #agent-listings .slick-list {
+        margin: 0 -10px;
+    }
+    .agent {
+        padding: 0 10px;
+    }
+    /* Estimate Section */
+    .estimate_inner_section {
+        padding: 40px 30px;
+    }
+    .estimate_inner_section .column_2 .estimate_property_button {
+        padding: 10px 20px;
+    }
+    .estimate_inner_section .column_2 .estimate_learn_button {
+        padding: 10px 30px;
+    }
+    /* Footer */
+    .site_footer {
+        margin-top: 90px;
+    }
+    .footer_top {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer_bottom{
+        padding: 25px 0px;
+    }
+    .site_header .site_logo {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .mobile_sidebar_nav {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .collapse:not(.show) {
+        display: contents;
+    }
+    .dp-none {
+        display: none;
+    }
+    .mobile_sidebar_nav {
+        display: block;
+    }
+    .site_header .container {
+        padding: 10px 0;
+    }
+    h2 {
+        font-size: 37px;
+    }
+    /* Realock Slider Section */
+    .heading_for_about_slider h2 {
+        font-size: 46px;
+        line-height: 70px;
+        text-align: center;
+    }
+    .para_for_about_slider p {
+        text-align: center;
+    }
+    .search_form_for_about_slider {
+        padding: 10px 15px;
+    }
+    .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider {
+        padding: 10px 30px;
+    }
+    .search_form_for_about_slider .placeholder_about_slider_section {
+        width: 65%;
+    }
+    .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder {
+        margin-left: 10px;
+    }
+    .search_form_for_about_slider .filter_icon {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .slick-dots li {
+        margin: 0 5px !important;
+    }
+    #realock_slider_section .slick-dots li button:before {
+        font-size: 40px;
+    }
+    .slick-active button:before {
+        outline-offset: -2px;
+    }
+    .bottom_realock_slider {
+        max-width: 720px;
+    }
+    /* Mobile Sidebar */
+    .navbar-light .navbar-toggler {
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+    .navbar-light .navbar-toggler:hover,.navbar-light .navbar-toggler:focus-visible {
+        color: #000000;
+        border: none;
+        outline: none;
+    }
+    .sidebar_icon svg {
+        font-size: 32px;
+        color: #ed6414;
+        border: none;
+        width: 24px;
+        height: 24px;
+        line-height: 40px;
+    }
+    .sidebar_icon svg:hover {
+        color: #ed6414;
+        border: none;
+    }
+    .sidebar_icon svg:focus {
+        outline: none;
+    }
+    .sidebar-nav {
+        padding: 0 10px;
+    }
+    .sidebar-nav .nav-item {
+        margin: 5px 0px;
+    }
+    .sidebar-nav .nav-item .nav-link {
+        font-size: 22px;
+        padding: 8px 30px 8px 30px;
+    }
+    /* About Section */
+    .bg_img_about {
+        padding: 60px 0px;
+    }
+    .about_house_info {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .title_about h5 {
+        padding-top: 30px;
+    }
+    .heading_about h2 {
+        font-size: 42px;
+        line-height: 43px;
+    }
+    .para_about p {
+        font-size: 16px;
+        padding-bottom: 40px;
+    }
+    .about_button {
+        margin-bottom: 30px;
+    }
+    /* Buyer & Seller Section */
+    .buyer_seller_top_inner_section .right_column {
+        padding-left: 20px;
+    }
+    .buyer_seller_title h5 {
+        margin-top: 25px;
+    }
+    .buyer_seller_button a {
+        margin-top: 30px;
+    }
+    /* testimonial Section */
+    .testimonial_inner_section .slick-prev {
+        width: 45px;
+        height: 45px;
+        top: -65px;
+        right: 60px;
+    }
+    .testimonial_inner_section .slick-next {
+        width: 45px;
+        height: 45px;
+        top: -65px;
+    }
+    /* Agent Section */
+    .agent .foreground .agent-image img {
+        max-width: 290px;
+    }
+    .agent .agent_detail:after {
+        height: 80%;
+    }
+    .agent_social {
+        bottom: 20px;
+        right: 15px;
+    }
+    /* Estimate section */
+    .estimate_heading h2 {
+        text-align: center;
+    }
+    .estimate_para p {
+        text-align: center;
+    }
+    .estimate_inner_section .column_2 {
+        margin-top: 15px;
+    }
+    /* Footer */
+    .footer_top .column_2 .site_contact_us {
+        font-size: 16px;
+    }
+    .footer_middle .column_1 .site_about_para {
+        width: 100%;
+        font-size: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .footer_middle .offer_menu .menu_item .menu_link {
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .footer_middle .company_menu .menu_item .menu_link {
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .newsletter_form .form_container input {
+        font-size: 16px;
+        padding-left: 10px;
+        height: 45px;
+    }
+    .footer_bottom .column_1 .site_copyright {
+        font-size: 16px;
+    }
+    .footer_bottom .column_2 a {
+        font-size: 16px;
+    }
+    .newsletter_form .form_container .form_submit_button {
+        font-size: 22px;
+        height: 45px;
+    }
+    .footer_bottom .column_2 .site_policy {
+        padding-right: 30px;
+    }
+    .footer_middle .column_1 .site_about_heading {
+        font-size: 22px;
+    }
+    .footer_middle .offer_menu_heading {
+        font-size: 22px;
+    }
+    .footer_middle .company_menu_heading {
+        font-size: 22px;
+    }
+    .newsletter_form .form_heading {
+        font-size: 22px;
+    }
+    .site_header .site_logo {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site_header .container {
+        padding: 8px 15px;
+    }
+    .mt-100 {
+        margin-top: 60px;
+    }
+    .mt-15 {
+        margin-top: 5px;
+    }
+    .pt-80 {
+        padding-top: 40px;
+    }
+    /* Realock Slider Section */
+    .heading_for_about_slider h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .para_for_about_slider p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .search_form_for_about_slider .city_icon {
+        display: none;
+    }
+    .search_form_for_about_slider {
+        padding: 10px 10px;
+    }
+    .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder {
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+    .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider {
+        padding: 10px 20px;
+    }
+    .search_form_for_about_slider .placeholder_about_slider_section {
+        width: 60%;
+    }
+    .search_form_for_about_slider .filter_icon {
+        width: 15%;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+    .search_form_for_about_slider .submit_button_about_slider_section {
+        width: 20%;
+    }
+    .bottom_realock_slider {
+        max-width: 540px;
+    }
+    /* About Section */
+    .bg_img_about {
+        padding: 40px 0px;
+    }
+    /* Property Listing Section */
+    .theme_button {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .theme_heading h2 {
+        text-align: center;
+    }
+    .theme_description p {
+        text-align: center;
+    }
+    .property .property-title {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    .property .property-address {
+        font-size: 18px;
+    }
+    .property .facilities {
+        margin-top: 10px;
+    }
+    .property .facilities p {
+        font-size: 18px;
+    }
+    /* Buyer and Seller Section */
+    .bg_img_buyer_seller {
+        padding: 50px 0px;
+    }
+    .buyer_seller_top_inner_section .left_column {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #buyer_seller_section .img_shadow {
+        width: 400px;
+        height: 400px;
+    }
+    .buyer_seller_bottom_inner_section {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 50px;
+        display: -webkit-box;      
+        display: -moz-box;         
+        display: -ms-flexbox;      
+        display: -webkit-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -moz-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -webkit-flex-direction: column-reverse; 
+        -ms-flex-direction: column-reverse;
+
+    }
+    .buyer_seller_bottom_inner_section .right_column {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .buyer_seller_top_inner_section .right_column {
+        padding-left: 40px;
+    }
+    .buyer_seller_bottom_inner_section .left_column {
+        padding-left: 40px;
+    }
+    /* category Button */
+    .category_inner_section {
+        margin-top: 20px;
+    }
+    .real_estate_categories {
+        padding-top: 20px;
+    }
+    /* Testimonial Section */
+    .testimonial_inner_section .slick-prev {
+        top: 35px;
+        right: 52%;
+    }
+    .testimonial_inner_section .slick-next {
+        top: 35px;
+        right: 38%;
+    }
+    .testimonial_inner_section {
+        padding-top: 0px;
+    }
+    .testimonial {
+        padding: 20px 30px 10px 30px;
+    }
+    .client_review p {
+        height: 100%;
+    }
+    /* Agent Section */
+    .agent .foreground .agent-image img {
+        width: 300px;
+        height: 300px;
+    }
+    .agent .agent_detail:after {
+        width: 55%;
+        right: 75px;
+    }
+    .agent_social {
+        position: initial;
+        padding-left: 20px;
+        margin-top: 90px;
+    }
+    .agent {
+        margin-bottom: 30px;
+    }
+    .agent .foreground {
+        display: flex;
+        justify-content: center;
+        display: -webkit-box;      
+        display: -moz-box;         
+        display: -ms-flexbox;      
+        display: -webkit-flex;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+    }
+    /* Estimate Section */
+    #estimate_section {
+        margin-top: 40px;
+    }
+    .estimate_inner_section  {
+        padding: 20px 15px;
+    }
+    .estimate_para p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .site_footer {
+        margin-top: 70px;
+    }
+    /* Footer */
+    .footer_top {
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+    .footer_top .column_2 .site_contact_us {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .footer_middle {
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .site_about .column_1 {
+        margin-bottom: 15px;
+    }
+    .footer_middle .column_1 .site_about_heading {
+        font-size: 20px;
+    }
+    .footer_middle .column_1 .site_about_para {
+        line-height: 20px;
+    }
+    .site_social_media {
+        margin-top: 5px;
+    }
+    .site_about .column_2 {
+        margin-bottom: 10px;
+    }
+    .footer_middle .offer_menu_heading {
+        font-size: 20px;
+    }
+    .footer_middle .offer_menu .menu_item .menu_link {
+        line-height: 32px;
+    }
+    .footer_middle .company_menu_heading {
+        font-size: 20px;
+    }
+    .footer_middle .company_menu .menu_item .menu_link {
+        line-height: 32px;
+    }
+    .newsletter_form .form_heading {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .newsletter_form .form_container input {
+        height: 40px;
+    }
+    .newsletter_form .form_container .form_submit_button {
+        height: 40px;
+        font-size: 20px;
+    }
+    .footer_bottom {
+        padding: 10px 0px;
+    }
+    .footer_bottom .column_2 .site_policy {
+        display: block;
+        text-align: left;
+    }
+    .footer_bottom .column_2 .site_conditions {
+        display: block;
+        text-align: left;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 539px) {
+    .agent .agent_detail:after {
+        width: 65%;
+        right: 45px;
+    }
+}
+
+@media (max-width:450px) {
+    .mt-100 {
+        margin-top: 40px;
+    }
+    .pt-80 {
+        padding-top: 20px;
+    }
+    h2 {
+        font-size: 33px;
+    } 
+    /* Realock Slider Section */
+    .heading_for_about_slider h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .para_for_about_slider p {
+        line-height: 24px;
+    }
+    .para_for_about_slider {
+        padding-right: 15px;
+    }
+    .search_form_for_about_slider .placeholder_about_slider_section {
+        width: 50%;
+    }
+    .search_form_for_about_slider .filter_icon {
+        width: 20%;
+    }
+    .about_slider .info_about_slider {
+        padding-bottom: 170px;
+    }
+    .bottom_realock_slider {
+        top: 63%;
+    }
+    .slick-dots {
+        bottom: 20px !important;
+    }
+    /* Property Listing Section */
+    .theme_description p {
+        font-size: 17px;
+    }
+    /* Buyer & Seller Section */
+    .bg_img_buyer_seller {
+        padding: 30px 0px;
+    }
+    #buyer_seller_section .img_shadow {
+        width: 370px;
+        height: 370px;
+    }
+    .buyer_seller_bottom_inner_section {
+        padding-top: 30px;
+    }
+    /* Category Section */
+    .category_inner_section {
+        margin-top: 0;
+    }
+    .p_category_image {
+        height: 175px;
+    }
+    .real_estate_categories .category_items_link .category_title {
+        left: 10px;
+        bottom: 10px;
+    }
+    /* Testimonial Section */
+    .bg_img_testimonial {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    /* Agent Section */
+    .agent .foreground .agent-image img {
+        width: 250px;
+        height: 250px;
+    }
+    .agent .agent_detail:after {
+        width: 70%;
+        height: 90%;
+        right: 30px;
+    }
+    .agent_social {
+        margin-top: 50px;
+    }
+    /* Estimate Section */
+    .estimate_inner_section .column_2 .estimate_property_button {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width:400px) {
+    .site_header .container {
+        padding: 5px 15px;
+    }
+    .mt-100 {
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    /* Realock Slider Section */
+    .heading_for_about_slider h2 {
+        font-size: 19px;
+        line-height: 19px;
+    }
+    .search_form_for_about_slider {
+        padding: 5px 5px;
+    }
+    .search_form_for_about_slider .placeholder_about_slider_section .form_placeholder {
+        padding: 5px 5px;
+    }
+    .para_for_about_slider p {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .search_form_for_about_slider .submit_button_about_slider_section .submit_button_for_about_slider {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .search_form_for_about_slider .filter_icon .svg_icon {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .search_form_for_about_slider .filter_icon .svg_icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    /* About Section */
+    .heading_about h2 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .para_about p {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+    /* Property Listing Section */
+    .theme_description p {
+        font-size: 16px;
+    }
+    .property .property-price {
+        top: 15px;
+        right: 25px;
+    }
+    .property .property-title {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+    .property .property-address {
+        font-size: 16px;
+        margin-top: 5px;
+    } 
+    .property .facilities p {
+        font-size: 16px;
+    }
+    .property .facilities p span {
+        font-size: 16px;
+    }
+    /* Buyer & Seller Section */
+    #buyer_seller_section .img_shadow {
+        width: 290px;
+        height: 290px;
+    }
+    .buyer_seller_top_inner_section .right_column {
+        padding-left: 12px;
+    }
+    .buyer_seller_bottom_inner_section .left_column {
+        padding-left: 30px;
+    }
+    /* Category Section */
+    .real_estate_categories .category_items_link .category_title {
+        font-size: 18px;
+        left: 5px;
+        bottom: 10px;
+    }
+    /* Testimonial Section */
+    .testimonial_inner_section .slick-next {
+        right: 31%;
+    }
+    .testimonial {
+        padding: 20px 20px 10px 20px;
+    }
+    .client_review p {
+        font-size: 16px;
+    }
+    /* Agent Section */
+    .agent_social {
+        margin-top: 40px;
+    }
+    .agent .foreground .agent-image img {
+        width: 230px;
+        height: 230px;
+    }
+    .agent .foreground {
+        display: flex;
+        justify-content: center;
+        display: -webkit-box;      
+        display: -moz-box;         
+        display: -ms-flexbox;      
+        display: -webkit-flex;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+
+    }
+    .agent .agent_detail:after {
+        width: 85%;
+        height: 90%;
+        right: 0px;
+    }
+    .agent .foreground .agent-image img {
+        width: 240px;
+        height: 240px;
+    }
+    /* Estimate Section */
+    #estimate_section {
+        margin-top: 20px;
+    }
+    .estimate_para p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .estimate_inner_section .column_2 .estimate_property_button {
+        margin-right: 0px;
+        padding: 10px 30px;
+    }
+    .estimate_inner_section .column_2 {
+        margin-top: 10px;
+    }
+    .estimate_inner_section .column_2 .estimate_learn_button {
+        margin-top: 10px;
+        padding: 10px 40px;
+    }
+    /* Footer */
+    .site_footer {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 400px) {
+    .testimonial_inner_section .slick-next {
+        right: 33%;
+    }
+    .agent .agent_detail:after {
+        width: 75%;
+        right: 15px;
+    }
+}
+
+@media (min-width: 400px) {
+    .estimate_inner_section .estimate_inner_row .column_2 br {
+        display: none;
+    }
+	.footer_bottom .site_info .site_copyright br {
+		display: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+        max-width: 1200px;
+    }
+}

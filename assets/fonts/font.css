@@ -1,0 +1,31 @@
+@font-face {
+	font-family: proxima-nova-bold;
+	src: url(Proxima-Nova-Bold.otf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: proxima-nova-extra-bold;
+	src: url(Proxima-Nova-Extra-Bold.otf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: lato-semi-bold;
+	src: url(Lato-Semi-Bold.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: lato-regular;
+	src: url(Lato-Regular.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: proxima-nova-bold;
+	src: url(Proxima-Nova-Bold-2.otf);
+	font-display: swap;
+}
+
+

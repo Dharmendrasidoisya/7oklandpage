@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> 7oak Devlopers</title>
+
+    <link href="assets/img/favicon.png" rel="icon">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/fonts/font.css">
+
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/homepage_2.css">
+
+    <link rel="stylesheet" href="assets/css/switch_color.css">
+
+    <link rel="stylesheet" href="assets/css/media-query.css">
+
+</head>
+<style>
+    #btnproduct:hover {
+        border-color: #ea4e38 !important;
+    }
+
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+
+    .category-btn {
+
+        border-radius: 15px;
+        padding: 6px 12px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .category-btn:hover {
+        background: linear-gradient(145deg, #ea4e38, #ea4e38);
+        color: #fff;
+        border-color: #ea4e38;
+        box-shadow: 0 8px 20px rgba(171, 133, 60, 0.3);
+    }
+
+    .category-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(171, 133, 60, 0.3);
+    }
+
+    #btnproduct {
+        border-radius: 15px !important;
+    }
+
+    #btnproduct:hover {
+        border-radius: 15px !important;
+    }
+</style>
+<style>
+    .chat-box {
+        /* display: flex; */
+        justify-content: flex-start;
+        padding: 0px 0 0px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .message-bubble {
+        background: #f2f4f6;
+        padding: 15px 10px;
+        border-radius: 20px 20px 20px 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        position: relative;
+    }
+
+    .typing-text {
+
+        white-space: nowrap;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #0f2043 !important;
+        width: 0;
+
+    }
+
+
+
+    /* end //animation */
+    .textarea-container {
+        position: relative;
+    }
+
+    .fake-textarea {
+        border-radius: 6px;
+        /* padding: 12px;
+                min-height: 80px; */
+        font-size: 14px;
+        /* background-color: #fff; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: normal;
+    }
+
+    .fake-textarea button {
+        background-color: #e5e5e5;
+        color: #0f2043;
+        /* border: 1px solid #0f2043 !important; */
+        padding: 6px 10px;
+        font-size: 14px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .fake-textarea button:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .send-icon {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: #666;
+        cursor: pointer;
+    }
+
+    .chat-option-btn {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 18px;
+        background-color: #ea4e38;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .chat-option-btn:hover {
+        background-color: #c03b2d;
+    }
+
+    .form-container {
+        display: none;
+    }
+
+    .form-container.lbl11 {
+        display: block;
+    }
+
+    .textarea-container {
+        margin-bottom: 10px;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .formbold-form-input {
+        width: 100%;
+        padding: 6px 12px;
+        border-radius: 15px !important;
+        font-size: 15px;
+        font-weight: 500;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease-in-out;
+
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        background-size: 16px;
+    }
+
+    .formbold-form-input:focus {
+        outline: none;
+        border-color: #ab853c;
+        box-shadow: 0 0 0 3px rgba(171, 133, 60, 0.2);
+    }
+
+    .formbold-form-input option {
+        font-size: 15px;
+        padding: 10px;
+    }
+</style>
+<style>
+    .textarea-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 65px;
+    }
+
+    .textarea-container textarea {
+        width: 100%;
+        padding-right: 40px;
+        /* Space for icon */
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 10px;
+        font-size: 12px;
+        resize: none;
+
+    }
+
+    .textarea-container .send-icon {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        color: #a8a8a8;
+    }
+
+    .textarea-container .send-icon:hover {
+        color: #0056b3;
+    }
+
+    .lblcross {
+        color: #000 !important;
+    }
+</style>
+<style>
+    /* 12 */
+    .btn-12 {
+        position: relative;
+        right: 20px;
+        bottom: 20px;
+        border: none;
+        box-shadow: none;
+        width: 130px;
+        height: 40px;
+        line-height: 42px;
+        -webkit-perspective: 230px;
+        perspective: 230px;
+    }
+
+    .btn-12 span {
+        background: rgb(0, 172, 238);
+        background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+        display: block;
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+        border-radius: 5px;
+        margin: 0;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .btn-12 span:nth-child(1) {
+        box-shadow:
+            -7px -7px 20px 0px #fff9,
+            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002,
+            4px 4px 5px 0px #0001;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12 span:nth-child(2) {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12:hover span:nth-child(1) {
+        /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    .btn-12:hover span:nth-child(2) {
+        /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+        color: transparent;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+    }
+</style>
+<style>
+    .form-container {
+        width: 360px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .lblcross {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .chat-box {
+        margin-top: 20px;
+    }
+
+    .message-bubble {
+        background: #f2f4f6;
+        padding: 15px 20px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-width: 90%;
+        font-size: 20px;
+        color: #000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .message-bubble .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .fake-textarea {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .fake-textarea button {
+        background: #fff;
+        border: 0px solid #ddd;
+        border-radius: 12px;
+        padding: 4px 9px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: left;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* .fake-textarea button:hover {
+    background: #f0f7ff;
+    border-color: #1877f2;
+} */
+
+    .fake-textarea button::after {
+        content: "➤";
+        color: #f18343;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .lblp {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 20px;
+        color: #666;
+    }
+
+    /* * {
+      box-sizing: border-box;
+  } */
+    @media screen and (min-device-width: 1360px) and (max-device-width: 1540px) {
+        .form-container textarea {
+            height: 40px !important;
+        }
+
+        .formbold-form-input {
+            padding: 0px 12px !important;
+        }
+    }
+
+    /* Button used to open the chat form - fixed at the bottom of the page */
+    .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 75px;
+        right: 14px;
+        width: 280px;
+    }
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 161px;
+        right: 15px;
+        /* border: 2px solid #f1f1f1; */
+        z-index: 9;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+        padding-top: 0px;
+    }
+
+    /* Full-width textarea */
+    .form-container textarea {
+        /* width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px; */
+
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        background: white;
+        font-weight: 500;
+        font-size: 15px;
+        color: #6b7280;
+        outline: none;
+        resize: none;
+    }
+
+    textarea::placeholder {
+        color: #6b7280;
+    }
+
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+        border-color: #6a64f1;
+        color: #6b7280;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+        /* background-color: #04AA6D; */
+        color: rgb(0, 0, 0);
+        border: 1px solid #000 !important;
+        padding: 10px 10px;
+        border: none;
+        cursor: pointer;
+        /* width: 49%; */
+        width: 100%;
+        /* margin-bottom: 10px; */
+        opacity: 0.8;
+        border-radius: 6px;
+    }
+
+    .form-container .btn:hover {
+        background-color: #ea4e38;
+        color: #fff;
+        border: 1px solid #000 !important;
+
+        border-radius: 6px;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+        opacity: 1;
+    }
+
+    /* .se-pre-con {
+                position: absolute;
+            } */
+
+    .formbold-mb-5 {
+        margin-bottom: 5px;
+    }
+
+    .formbold-pt-3 {
+        padding-top: 12px;
+    }
+
+    .formbold-main-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .formbold-form-wrapper {
+        margin: 0 auto;
+        max-width: 550px;
+        width: 100%;
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        display: none;
+    }
+
+    .formbold-form-wrapper.active {
+        display: block;
+    }
+
+    .formbold-form-label {
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+        color: #07074d;
+        margin-bottom: 0px;
+    }
+
+    .formbold-form-label-2 {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .formbold-form-input {
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 6px;
+        border: 1px solid #e0e0e0;
+        background: white;
+        font-weight: 500;
+        font-size: 12px;
+        color: #6b7280;
+        outline: none;
+        resize: none;
+    }
+
+    .formbold-form-input:focus {
+        border-color: #6a64f1;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .formbold-btn {
+        text-align: center;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 14px 32px;
+        border: none;
+        font-weight: 600;
+        background-color: #6a64f1;
+        color: white;
+        cursor: pointer;
+    }
+
+    .formbold-btn:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .formbold--mx-3 {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .formbold-px-3 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .w-full {
+        width: 100%;
+    }
+
+    .formbold-form-header {
+        background: #6a64f1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 36px;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .formbold-form-header h3 {
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+    }
+
+    .formbold-form-header button {
+        color: white;
+        background: transparent;
+        border: none;
+    }
+
+    .formbold-chatbox-form {
+        padding: 32px 36px;
+    }
+
+    .formbold-action-buttons {
+        /* max-width: 550px; */
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 0px;
+    }
+
+    .formbold-action-btn {
+        width: 70px;
+        height: 70px;
+        /* background: #edf2fa; */
+        background: #ed6414;
+        color: white;
+        border-radius: 50%;
+        margin-left: 20px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .formbold-action-btn .formbold-cross-icon {
+        display: none;
+    }
+
+    .formbold-action-btn.active .formbold-cross-icon {
+        display: block;
+    }
+
+    .formbold-action-btn.active .formbold-chat-icon {
+        display: none;
+    }
+
+    .lblh1 {
+        /* background: #000; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 50px !important;
+        border-radius: 8px 8px 0px 0px;
+        font-size: 14px;
+        color: #fff !important;
+    }
+
+    .lbla {
+        color: #000 !important;
+    }
+
+    .lblm-b {
+        margin-bottom: 20px;
+    }
+
+    .lblp {
+        color: black !important;
+        display: flex;
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .lblcancle {
+        background-color: #ab853c;
+        color: #fff !important;
+        border: 1px solid #ab853c !important;
+        padding: 10px 10px;
+        cursor: pointer;
+        width: 48%;
+        margin-bottom: 10px;
+        line-height: 12px;
+        border-radius: 6px;
+        margin-bottom: 0px !important;
+    }
+
+    .banner-area .box-cell,
+    .banner-area .box-cell div,
+    .banner-area.auto-height,
+    .banner-area.auto-height div {
+        z-index: 1;
+    }
+
+    .btn {
+        line-height: 12px;
+    }
+
+    input {
+        min-height: 0px;
+    }
+
+    .d-n {
+        display: none;
+    }
+
+    .lblcross {
+        color: #000;
+        text-align: end;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .lblchat {
+        background: #F2F2F2;
+        padding: 10px;
+        border-radius: 20px 20px 20px 5px;
+        margin-bottom: 10px;
+
+    }
+
+    .lblchath1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000 !important;
+        margin: 0 0 0px !important;
+
+    }
+
+    .lblh3 {
+        color: #000 !important;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .lblp1 {
+        color: #000 !important;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .lbllabel {
+        color: #000;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .divp {
+        color: #000 !important;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 50px;
+        background: rgb(250, 251, 251);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .lblbefore {
+        margin-top: 50px;
+    }
+
+    .divp a {
+        color: #000 !important;
+        border-bottom: 1px solid;
+    }
+</style>
+<style>
+    /* 12 */
+    .btn-12 {
+        position: relative;
+        right: 20px;
+        bottom: 20px;
+        border: none;
+        box-shadow: none;
+        width: 130px;
+        height: 40px;
+        line-height: 42px;
+        -webkit-perspective: 230px;
+        perspective: 230px;
+    }
+
+    .btn-12 span {
+        background: rgb(0, 172, 238);
+        background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+        display: block;
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+        border-radius: 5px;
+        margin: 0;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .btn-12 span:nth-child(1) {
+        box-shadow:
+            -7px -7px 20px 0px #fff9,
+            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002,
+            4px 4px 5px 0px #0001;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12 span:nth-child(2) {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12:hover span:nth-child(1) {
+        /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    .btn-12:hover span:nth-child(2) {
+        /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+        color: transparent;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+    }
+</style>
+<style>
+    input {
+        height: 38px;
+        /* border: 0 */
+    }
+
+    input {
+        height: 38px;
+        padding: 0 12px 0 9px;
+        padding-right: 25px;
+
+        color: var(--body-color);
+        background-color: transparent;
+        border-radius: 8px;
+        font-size: 16px;
+        width: 100%;
+        font-family: var(--body-font);
+        -webkit-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out
+    }
+
+    input:focus {
+        outline: 0;
+        box-shadow: none;
+        border-color: #ff4136;
+        background-color: transparent
+    }
+</style>
+
+<body>
+
+    <div id="wrap">
+
+        <!-- Header starts -->
+
+        <header class="site_header">
+            <div class="header_top">
+                <div class="container content_header_top">
+                    <div class="contact_information">
+                        <div class="column_1">
+                            <a href="javascript:void(0);"><i class="header_top_icons fa-solid fa-square-phone"></i></a>
+                            <a href="tel:+917070701006" class="header_top_text contact_number">+917070701006</a>
+                        </div>
+                        <div class="column_2">
+                            <a href="javascript:void(0);"><i class="header_top_icons fa-solid fa-envelope"></i></a>
+                            <a href="mailto:sales@7oakdevelopers.com"
+                                class="header_top_text contact_mail">sales@7oakdevelopers.com</a>
+                        </div>
+                        <div class="column_3">
+                            <a href="https://www.facebook.com/7oakdevelopers/" target="_blank"><i class="header_top_icons fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com/7oak_Developers" target="_blank"><i class="header_top_icons fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/7oakdevelopers/" target="_blank"><i class="header_top_icons fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCw8Bg9xYa_2FZxY9rFwGBWQ" target="_blank"><i class="header_top_icons fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container main_header">
+                <div class="logo">
+                    <a class="site_logo" href="index.html" >
+                        <img src="assets/img/logo.png" style="width: 75%;" alt="logo main">
+                    </a>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav dp-none">
+                            <li class="nav-item active dropdown">
+                                <a class="nav-link dropdown-toggle" aria-current="page" href="#about_section"
+                                    id="navbarDropdownMenuLink">home</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#buyer_seller_section">about Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#property_listing_section">Our Project</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#category_section">Dholera Advantage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonial_section">testimonial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#agent_section">Contact Us</a>
+                            </li>
+
+                        </ul>
+                        <button class="navbar-toggler sidebar_icon" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><i
+                                class="fas fa-list"></i>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="mobile_sidebar_nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about_section">Home</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#buyer_seller_section">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#property_listing_section">Our Projects</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#category_section">Dholera Advantage</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#testimonial_section">Testimonials</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#agent_section">Contact Us</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Header ends -->
+
+        <!-- Realock information section starts -->
+
+         <section id="about_section">
+            <div class="bg_img_about">
+                <div class="container">
+                    <div class="col-md-5 col-12 about_house_info " style="background-color: #fff;">
+
+                        <div class="heading_about" style="text-align: center; padding-top: 30px;">
+                            <h2 style="color: #000; font-size: 30px;">Residential Plots in Dholera SIR</h2>
+                        </div>
+
+                        <div class="heading_about" style="text-align: center;">
+                            <h3 style="color: #000; font-size: 22px; margin-bottom: 10px;"> At Dholera, Ahmedabad </h3>
+                            <h4 style="color: #000; font-size: 18px; margin-bottom: 10px;">by 7oak Devlopers</h4>
+                        </div>
+
+
+                        <div class="para_about" style="background: #dc5d13; border-radius: 8px 8px 0px 0px; text-align: center;margin-bottom: 10px; padding: 5px;">
+                            <span class="blink-text" style="font-size: 18px;">NA, NOC, Title clear Plots</span>
+                        </div>
+                        <div class="para_about" style="background: #dc5d13; border-radius: 8px 8px 0px 0px; text-align: center;margin-bottom: 10px; padding: 5px;">
+                            <span class="" style="color: #fff; font-size: 18px;" >State Highway Touch Project</span>
+                        </div>
+                        <div class="para_about" style="background: #dc5d13; border-radius: 8px 8px 0px 0px; text-align: center; margin-bottom: 10px; padding: 5px;">
+                            <span class="" style="color: #fff; font-size: 18px;">15+ Years of experience in Dholera</span>
+                        </div>
+
+                        <div class="para_about" style="background: #dc5d13d1; border-radius: 0px 0px 8px 8px; text-align: center; margin-bottom: 10px; padding: 5px;">
+                            <span class="blink-text" style="color: #000; font-size: 18px;">Ample Amenities for all age groups</span>
+                        </div>
+
+                        <div class="para_about" style="background: #dc5d13d1; border-radius: 0px 0px 8px 8px; text-align: center; margin-bottom: 10px; padding: 5px;">
+                            <span class="blink-text" style="color: #000; font-size: 18px;">Modern Development </span>
+                        </div>
+                        <div class="para_about" style="background: #dc5d13d1; border-radius: 0px 0px 8px 8px; text-align: center; margin-bottom: 10px; padding: 5px;">
+                            <span class="blink-text" style="color: #000; font-size: 18px;">Best Rates</span>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <span style="font-size: 26px; "> ₹  </span> <span style="font-size: 26px; color: #dc5d13;">  15 Lac* </span>
+                        </div>
+
+                        <div class="about_button" style="text-align: center; margin-bottom: 30px !important;">
+                            <a href="#contact_us" class="btn">Enquire Now</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="realock_info" style="display: none;">
+            <div class="container content_info">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 info_heading">
+                        <h1>find your best smart real estate</h1>
+                    </div>
+                    <div class="col-lg-6 col-md-12 para_info">
+                        <p><span> Lorem ipsum dolor sit amet,</span> consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+         <section id="buyer_seller_section" class="">
+            <div class="bg_img_buyer_seller">
+                <div class="container">
+                    <div class="row buyer_seller_top_inner_section">
+                        <div class="col-md-6 col-12 left_column">
+                            <img class="img_shadow" src="assets/img/about.jpg" style="width:-webkit-fill-available" alt="house-image">
+                        </div>
+                        <div class="col-md-6 col-12 right_column">
+                            <div class="buyer_seller_title d-none ">
+                                <h5>About Us</h5>
+                            </div>
+                            <div class="buyer_seller_heading lblab" >
+                                <h2>About Us</h2>
+                            </div>
+                            <div class="buyer_seller_para">
+                                <p>Founded in year 2012.- Reliable, trustable and biggest brand of Dholera. 7 Oak Developers is Dholera premier real estate developer with offices in Ahmedabad and Dholera SIR. The consistent faith in us by our valued customers makes us one of the fastest emerging real estate developer in Dholera, Providing one-stop investment solutions of Industrial, Commercial, Residential land & Plots in Dholera SIR.</p>
+                            </div>
+                            <!-- <div class="buyer_seller_button">
+                                <a class="btn" href="javascript:void(0);">find a home</a>
+                            </div> -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section  class="mt-50">
+            <div class="container">
+                <div class="row" style="padding-bottom: 10px;">
+                    <div class="col-lg-9 col-md-8 col-12">
+                        <div class="theme_heading">
+                            <h2 class="text-left">Why Choose Us</h2>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12 theme_button" style="display: none;">
+                        <a href="javascript:void(0);" class="btn">explore all listings<i class="icon fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="row estimate_inner_row">
+                        <div class="col-lg-6 col-12 column_1 order-2 order-md-1 lblabt">
+
+                            <p>We know that the business of India has just begun due to which, we spend noticeable time and energy thinking about the needs and demands of the future. When we develop land, we do it with a vision of what tomorrow needs today. We never begin a project without a firm understanding of the development market, its population growth, ecological and climatic impact & changes and environment-friendly living conditions.</p>
+                            <br>
+                            <p>It is based on these findings and applications that we build the future world for our clients and partners of today. So when you look at 7 oak Developers to develop your land, lifestyle or personal space for today, know that you are promising your assets a secure future.</p>
+                            <br>
+                            <ul style="padding-left: 20px;">
+                                <li style="list-style: disc;"> Plan, Build, Modeling, Publish</li>
+                                <li style="list-style: disc;"> Complete Legality (N.A, N.O.C, Plan pass)</li>
+                                <li style="list-style: disc;"> RERA Approved Residential Projects</li>
+                                <li style="list-style: disc;"> Efficient Governance</li>
+                                <li style="list-style: disc;"> Sustainability</li>
+                                <li style="list-style: disc;"> Job/Business Opportunities</li>
+                                <li style="list-style: disc;"> World-Class Infrastructure</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-6 col-12 column_2 lbltop order-1 order-md-2">
+
+                            <img class="img_shadow" style="width: -webkit-fill-available; border-radius: 0px 100px 0px 100px;" src="assets/img/about-img.png" alt="house-image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section  class="mt-50">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="column">
+                        <div class="card card12">
+                        <p><i class="fa fa-smile"></i></p>
+                        <h3>3000+</h3>
+                        <p>Satisfied Clients</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card card12">
+                        <p><i class="fa fa-user"></i></p>
+                        <h3>2729+</h3>
+                        <p>Plots Sold</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card card12">
+                        <p><i class="fa fa-home"></i></p>
+                        <h3>306+</h3>
+                        <p>Plots Available</p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card card12">
+                        <p><i class="fa fa-coffee"></i></p>
+                        <h3>100+</h3>
+                        <p>Projects</p>
+                        </div>
+                    </div>
+                    </div>
+
+            </div>
+        </section>
+
+        <section id="property_listing_section" class="mt-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-8 col-12">
+                        <div class="theme_heading">
+                            <h2>Ongoing Residential Projects</h2>
+                        </div>
+                        <div class="theme_description d-none">
+                            <p class="mt-15">Ongoing Project</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12 theme_button" style="display: none;">
+                        <a href="javascript:void(0);" class="btn">explore all listings<i class="icon fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div id="property-listings" class="pt-30">
+                    <div class="property">
+                        <div class="property-image"><img src="assets/img/pr/1.webp"
+                                alt="property_image">
+
+                        </div>
+                        <h3 class="property-title">7 Oak Shangri La </h3>
+
+                    </div>
+
+                    <div class="property">
+                        <div class="property-image"><img src="assets/img/pr/2.webp"
+                                alt="property_image">
+
+                        </div>
+                        <h3 class="property-title">7 Oak SuperCity</h3>
+
+                    </div>
+
+                    <div class="property">
+                        <div class="property-image"><img src="assets/img/pr/3.webp"
+                                alt="property_image">
+                        </div>
+                        <h3 class="property-title">7 Oak Gateway</h3>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+         <section id="image_slider_section" style="padding-bottom: 0px;" class="mt-50">
+            <div class="container">
+                <div class="realock_form_content d-none">
+                    <h2 class="d-none">image slider</h2>
+                    <form class="search_form_realock" action="#" method="GET">
+                        <div class="city_icon">
+                            <div class="svg_icon">
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                        </div>
+                        <div class="realock_form_placeholder">
+                            <input class="form_placeholder" type="text"
+                                placeholder="Search for city, neighorhood, agent, address...">
+                        </div>
+                        <div class="filter_icon">
+                            <div class="svg_icon">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                        </div>
+                        <div class="realock_form_button">
+                            <input class="form_submit_button" type="submit" name="submit" value="search">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="image_slider">
+                    <div class="slide image_1">
+                        <img src="assets/img/1.jpg" alt="gallery-image">
+                    </div>
+                    <div class="slide image_2">
+                        <img src="assets/img/2.jpg" alt="gallery-image">
+                    </div>
+                    <div class="slide image_3">
+                        <img src="assets/img/3.jpg" alt="gallery-image">
+                    </div>
+                    <div class="slide image_4">
+                        <img src="assets/img/4.jpg" alt="gallery-image">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="category_section" class="mt-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-8 col-12">
+                        <div class="theme_heading">
+                            <h2>Advantage Of Investment in Dholera</h2>
+                        </div>
+                        <div class="theme_description d-none">
+                            <p class="mt-15">All Mega Project Near Our Project</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12 theme_button" style="display: none;">
+                        <a href="javascript:void(0);" class="btn">explore properties<i class="icon fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="row category_inner_section">
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Worldclass-Infrastructure.png" loading="lazy">
+
+                                <h4 class="category_title lblfont" style="color: #000;">Worldclass Infrastructure</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Ease-of-Governance.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Ease of Governance</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                               <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Plug-Play.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Plug & Play</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Social-Infrastructure.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Social Infrastructure</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Ease-of-Business.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Ease of Business</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/External-Connectivity.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">External Connectivity</h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Live-Work-and-Play.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Live, Work and Play</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Technology.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Technology</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Sustainability.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Sustainability</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" class="lblw" src="assets/img/icon/Fast-Track-Approvals.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Fast Track Approvals</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Security.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Security</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-6 category_column">
+                        <div class="real_estate_categories">
+                            <div class="category_items" style="text-align: center;">
+                                <img alt="Worldclass Infrastructure" class="lblw" src="assets/img/icon/Internal-Connectivity.png" loading="lazy">
+                                <h4 class="category_title lblfont" style="color: #000;">Internal Connectivity</h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Category section ends-->
+
+        <!-- Testimonial section starts-->
+
+        <section id="testimonial_section" class="mt-50">
+            <div class="bg_img_testimonial">
+                <div class="container">
+                    <div class="theme_heading">
+                        <h2>Testimonials from clients</h2>
+                    </div>
+                    <div class="theme_description d-none">
+                        <p class="mt-15">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    </div>
+                    <div class="testimonial_inner_section">
+
+                        <div class="client_testimonials">
+                            <div class="testimonial">
+                                <div class="testimonial_icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <div class="client_review">
+                                    <p>“After my retirement I was in search of apollution free place with good future scope and I selected DholeraSIR, today I leave in the Best residential project of Dholera “7OakGoldencity” Villa no 152 with Good Neighborhood, I am sure this project and its amenities will attract people coming to Residein Dholera for work.”</p>
+                                </div>
+                                <div class="client_name">
+                                    <h4>Mr.Jagbirsinh Sidhu</h4>
+                                </div>
+                                <div class="client_destination">
+                                    <h5>(Retired Brigadier)</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="client_testimonials">
+                            <div class="testimonial">
+                                <div class="testimonial_icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <div class="client_review">
+                                    <p>“I am pleased to convey that my experience of dealing with 7oak developers on the basis of transparency, professionalism and integrity in their expertise of dealing with Dholera Projects has been very good”</p>
+                                </div>
+                                <div class="client_name">
+                                    <h4>Mr.Sanjay Bangar</h4>
+                                </div>
+                                <div class="client_destination">
+                                    <h5>(former Indian cricketer & Batting coach of Royal challenger Bangalore)</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="client_testimonials">
+                            <div class="testimonial">
+                                <div class="testimonial_icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <div class="client_review">
+                                    <p>“I had come for an video shoot and got a chance to stay at 7 Oak villa project, me and my team enjoyed our stay and Games at the Project and were so impressed with the service of the team, that we bought a plot for us in Golden city.”</p>
+                                </div>
+                                <div class="client_name">
+                                    <h4>Mr.Khajurbhai</h4>
+                                </div>
+                                <div class="client_destination">
+                                    <h5>(Actor, Director & You tuber)</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="client_testimonials">
+                            <div class="testimonial">
+                                <div class="testimonial_icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <div class="client_review">
+                                    <p>“India's first green field smart city is a benchmark, I am blessed to invest in this beautiful city which has a dvanced technologies and where i can get advanced facilities. 7 oak developers are very friendly they have good properties at reasonable rate with friendly environment love to be a part of 7 oak I will surely shoot one of my film there in future.”</p>
+                                </div>
+                                <div class="client_name">
+                                    <h4>Mr.Tikam Sharma</h4>
+                                </div>
+                                <div class="client_destination">
+                                    <h5>(Producer /actor /film maker)</h5>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial section ends-->
+
+        <style>
+
+
+.faq_7 .responsive-cell-block {
+  min-height: 75px;
+}
+
+.faq_7 .text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.faq_7 .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.faq_7 .faq-head-bg {
+  background-color: #03a9f4;
+  color: white;
+  padding-top: 80px;
+  padding-right: 60px;
+  padding-bottom: 80px;
+  padding-left: 60px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+.faq_7 .text-blk.faq-heading1 {
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.faq_7 .text-blk.faq-subheading {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.faq_7 .faq-dropdown-bg {
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.faq_7 .faq {
+  display: block;
+  flex-direction: column;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #aaaaaa;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 25px;
+  margin-left: 0px;
+}
+
+.faq_7 .faq-question-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.faq_7 .faq-question-container:hover {
+  cursor: pointer;
+}
+
+.faq_7 .text-blk.faq-questions {
+  color: #000;
+  font-size: 20px;
+}
+
+.faq_7 .text-blk.faq-answer {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  color: #000;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.faq_7 .text-blk.faq-subheading {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  max-width: 590px;
+  font-size: 18px;
+}
+
+.faq_7 .answer-box {
+  max-height: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: max-height;
+}
+
+.faq_7 .faq.active .openimg {
+  transform: rotate(180deg);
+}
+
+.faq_7 .openimg {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  transition-property: transform;
+}
+
+.faq_7 .faq.active .answer-box {
+  max-height: 550px;
+}
+
+.faq_7 .faq-head-content {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  max-width: 450px;
+}
+
+.faq_7 .container-block {
+  max-width: 800px;
+}
+
+@media (max-width: 1024px) {
+  .faq_7 .text-blk.faq-answer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq_7 .text-blk.faq-heading1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+  }
+
+  .faq_7 .faq-head-content {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .faq_7 .faq-head-bg {
+    padding-top: 50px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+  }
+
+  .faq_7 .faq-dropdown-bg {
+    padding-top: 50px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+  }
+
+  .faq_7 .text-blk.faq-questions {
+    font-size: 18px;
+  }
+
+  .faq_7 .text-blk.faq-answer {
+    font-size: 16px;
+  }
+
+  .faq_7 .text-blk.faq-subheading {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-5.faq-head-bg {
+    padding-top: 80px;
+    padding-right: 30px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-7.faq-dropdown-bg {
+    padding-top: 80px;
+    padding-right: 30px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-5.wk-ipadp-5.faq-head-bg {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+
+  .faq_7 .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-7.wk-ipadp-7.faq-dropdown-bg {
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+  }
+
+  .faq_7 .text-blk.faq-answer {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    line-height: 22px;
+    font-size: 16px;
+  }
+
+  .faq_7 .text-blk.faq-questions {
+    font-size: 18px;
+  }
+
+  .faq_7 .text-blk.faq-heading1 {
+    font-size: 26px;
+  }
+
+  .faq_7 .text-blk.faq-subheading {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.lblbottom{
+        margin-bottom: 20px;
+}
+.estimate_inner_row{
+    align-items: flex-start;
+}
+        </style>
+
+        <!-- Estimate section starts-->
+
+        <section  class="mt-50">
+            <div class="container">
+                <div class="estimate_inner_section">
+                    <div class="row estimate_inner_row">
+                        <div class="col-lg-7 col-12 column_1">
+                            <div class="estimate_heading">
+                                <h2 style="font-size: 38px;">FAQ</h2>
+                            </div>
+                            <div class="estimate_para">
+                               <div class="faq_7" unique-script-id="w-w-dm-id">
+                                <div class="responsive-container-block">
+
+                                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg" id="imiw">
+                                    <div class="container-block" id="iwk5t">
+                                        <div class="faq">
+                                        <span class="faq-question-container">
+                                            <p class="text-blk faq-questions">
+                                            Why Investors Are Flocking To Investment In Dholera Smart City?
+                                            </p>
+                                            <img class="openimg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/arrow.svg">
+                                        </span>
+                                        <div class="answer-box">
+                                            <p class="text-blk faq-answer">
+                                            Residential Plots in Dholera SIR is getting hold of momentum as development in the smart city is marching in front with full vigor. Dholera Smart City Project is 1st SIR within far above the ground impact Delhi-Mumbai Industrial Corridor.
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="faq">
+                                        <span class="faq-question-container">
+                                            <p class="text-blk faq-questions">
+                                            Is it right time to Investment in Dholera SIR Residential Scheme?
+                                            </p>
+                                            <img class="openimg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/arrow.svg">
+                                        </span>
+                                        <div class="answer-box">
+                                            <p class="text-blk faq-answer">
+                                            As per the experts, The property value is low right now when compared to other Well-established cities, So it's a best time for making Investment in Dholera SIR Residential Scheme before Price hikes.
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="faq">
+                                        <span class="faq-question-container">
+                                            <p class="text-blk faq-questions">
+                                            7oakdevelopers is Offering Residential Plots is available on EMI?
+                                            </p>
+                                            <img class="openimg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/arrow.svg">
+                                        </span>
+                                        <div class="answer-box">
+                                            <p class="text-blk faq-answer">
+                                            7oakdevelopers Offering Dholera SIR Residential Plots is Now Available on EMI. BOOKING OPEN FOR Dholera Smart City.
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="faq">
+                                        <span class="faq-question-container">
+                                            <p class="text-blk faq-questions">
+                                            7oakdevelopers is Offering Residential Plots in Dholera SIR are N.A. NOC Title Clearance?
+                                            </p>
+                                            <img class="openimg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/arrow.svg">
+                                        </span>
+                                        <div class="answer-box">
+                                            <p class="text-blk faq-answer">
+                                            Yes, 7oakdevelopers Offering All Residential Plots in Dholera SIR are N.A. NOC Title Clear
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div class="faq">
+                                        <span class="faq-question-container">
+                                            <p class="text-blk faq-questions">
+                                            How To Choose Best Property For Investment And For Living?
+                                            </p>
+                                            <img class="openimg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/arrow.svg">
+                                        </span>
+                                        <div class="answer-box">
+                                            <p class="text-blk faq-answer">
+                                            Expert advice in such decisions is really very important, but apart from that, one should also have some knowledge about the factors to be considered while taking a division of property.
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-12 column_2" id="contact_us">
+                            <div class="estimate_heading">
+                                <h2 style="font-size: 38px;">Request Quote</h2>
+                            </div>
+                                <div class="estimate_para">
+                                    <form action="config.php" method="POST" id="popupForm" class="form-horizontal contact-form msg-sending-form">
+
+                                        <!-- <input name="vind" type="hidden" id="vind" value="44917" ifkey="vind" />
+                                        <input name="ctype" type="hidden" id="ctype" value="I1114" ifkey="ctype" />
+                                        <input name="pname" type="hidden" id="pname" value="7Oak Developers" ifkey="pname" /> -->
+
+                                            <div class="lblbottom">
+                                                <input style="width: -webkit-fill-available; padding: 10px; border-radius: 10px;" type='text' name='name' maxlength='80' placeholder='Name *' required pattern="[A-Za-z\s]+" title="Only letters allowed">
+
+                                            </div>
+
+                                            <div class="lblbottom">
+                                                <input style="width: -webkit-fill-available; padding: 10px; border-radius: 10px;" type='email' id="mail" name="mail" maxlength='100' placeholder='Email *' required>
+
+                                            </div>
+
+                                            <div class="lblbottom">
+                                                 <input style="width: -webkit-fill-available; padding: 10px; border-radius: 10px;" type='text' id="subj" name="subj" maxlength='10' placeholder='Phone *' required pattern="\d{10}" title="Enter 10 digit phone number">
+                                            </div>
+
+                                            <!-- <div class="lblbottom">
+                                                <input style="width: -webkit-fill-available; padding: 10px; border-radius: 10px;" id="location" type="text" name="location" placeholder="Your Location *" required="">
+                                            </div> -->
+
+                                            <div class="lblbottom">
+                                                 <textarea style="width: -webkit-fill-available; padding: 10px; border-radius: 10px;" rows="5" name='message' placeholder='Message *' required></textarea>
+                                            </div>
+
+                                            <!-- <button type="button" name="submit" onclick="PostData(this.form)" class="btn custom_btn btn-quote">Submit Now</button> -->
+                                            <input type='submit' id='formsubmit1' class="btn custom_btn btn-quote" value='Submit'>
+
+                                    </form>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estimate section ends-->
+
+        <!-- Footer starts-->
+
+        <footer class="site_footer" id="agent_section">
+            <div class="container">
+
+                <div class="footer_top">
+                    <div class="row site_name">
+                        <div class="col-md-6 col-12 column_1">
+                            <a class="site_logo" href="index.html">
+                                <img src="assets/img/logow.png" style="" alt="logo main">
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-12 column_2">
+                            <h5 class="site_contact_us">Contact Us: <a href="mailto:sales@7oakdevelopers.com"
+                                    >sales@7oakdevelopers.com</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_middle">
+                    <div class="row site_about">
+                        <div class="col-md-4 col-12 column_1">
+                            <h4 class="site_about_heading">about</h4>
+                            <p class="site_about_para">
+                                Founded in year 2005, 7 Oak Developers is Dholera premier real estate developer with offices in Ahmedabad and Dholera SIR.
+                            </p>
+                            <ul class="site_social_media">
+                                <li class="social_media_icons">
+                                    <a href="https://www.facebook.com/7oakdevelopers/" target="_blank"><i class="header_top_icons fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://x.com/7oak_Developers" target="_blank"><i class="header_top_icons fa-brands fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/7oakdevelopers/" target="_blank"><i class="header_top_icons fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCw8Bg9xYa_2FZxY9rFwGBWQ" target="_blank"><i class="header_top_icons fa-brands fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-12 column_2">
+                            <div class="row">
+                                <div class="col-6 left_container">
+                                    <h4 class="offer_menu_heading">Quick Links</h4>
+                                    <ul class="offer_menu">
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">Home</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">About Us</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">Our Project</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">Dholera Advantage</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">Testimonial</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">Conatct Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 right_container" style="display: none;">
+                                    <h4 class="company_menu_heading">company</h4>
+                                    <ul class="company_menu">
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">about us</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">recent blog</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">contact us</a></li>
+                                        <li class="menu_item"><a href="javascript:void(0);" class="menu_link">conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12 column_3">
+                            <form action="#" class="newsletter_form">
+                                <h4 class="form_heading">Contact Us</h4>
+                                <ul class="company_menu">
+                                        <li class="menu_item"><a  class="menu_link"> <i class="fa fa-building" aria-hidden="true"></i> 7 Oak Developers</a></li>
+                                        <li class="menu_item"><a class="menu_link" style="    line-height: 30px;"> <i class="fa fa-location-arrow" aria-hidden="true"></i> 513&514/ B Square3/ Sindhu Bhavan Road, Near Tradebulls, Ahmedabad Gujarat - 380054</a></li>
+                                        <li class="menu_item"><a href="tel:+917070701006" class="menu_link"><i class="fa fa-phone" aria-hidden="true"></i> +91 7070701006</a></li>
+                                        <li class="menu_item"><a href="mailto:sales@7oakdevelopers.com" class="menu_link"><i class="fa fa-envelope" aria-hidden="true"></i> sales@7oakdevelopers.com</a></li>
+                                    </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer_bottom">
+                    <div class="row site_info">
+                        <div class="col-xl-8 col-lg-7 col-md-6 col-12 column_1">
+                            <p class="site_copyright"> Made with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+                                 and passion by  <a style="color: #ED6414;" href="https://www.goadsindia.com/"> Ads India</a></p>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-6 col-12 column_2">
+                            <a href="javascript:void(0);" class="site_policy">privacy policy</a>
+                            <!-- <a href="javascript:void(0);" class="site_conditions">terms & conditions</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer ends-->
+
+
+
+    </div>
+
+    <div class="footer-box" style="display: none;">
+        <div class="book-app" style="background: #ed6414;" id="req-apnmt2">
+            <a class="nav_up click1" href="#contact_us" style="color: #FFF; font-size: 12px; font-weight: 600;"><i class="fa fa-envelope" style="margin-right: 5px;"></i>Enquire Now</a>
+        </div>
+        <div class="book-app" style="background: #31261d; display: none;">
+            <a class="nav_up" href="tel:+91 7070701006" style="color: #FFF; font-size: 12px; font-weight: 600;"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>Call Now</a>
+        </div>
+        <div class="book-app" style="background: #2db640;">
+            <a onclick="gtag('event', 'send', { 'event_category': 'click on whatsapp', 'event_action': 'Mobile', 'event_label': '+917070701006' });" href="https://api.whatsapp.com/send?phone=+917070701006&amp;text=Hey There! I’m looking for a property in Dholera Smart City." target="_blank" style="color: #FFF; font-size: 12px; font-weight: 600;"><i class="fab fa-whatsapp" style="margin-right: 5px;"></i>Whatsapp</a>
+        </div>
+    </div>
+
+
+     <a href="https://web.whatsapp.com/send?l=en&amp;phone=+917070701006&amp;text=Hey There! I’m looking for a property in Dholera Smart City."
+        class="float deskwhatsapp" target="_blank">
+         <img loading="lazy" src="assets/img/wt.png" alt="whatsapp" style="width: 50px;">
+    </a>
+
+    <a style="display: none !important;" href="https://api.whatsapp.com/send?phone=+917070701006&text= Hey There! I’m looking for a property in Dholera Smart City."
+        class="float mobiwhatsapp" target="_blank">
+         <img loading="lazy" src="assets/img/wt.png" alt="whatsapp" style="width: 50px;">
+    </a>
+
+    <style>
+        .mobiwhatsapp {
+            display: none;
+        }
+
+        .float {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 60px;
+    left: 10px;
+    /* background-color: #25d366; */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+        @media only screen and (max-width: 600px) {
+
+            .mobiwhatsapp {
+                display: block !important;
+            }
+
+            .deskwhatsapp {
+                display: none;
+            }
+        }
+
+        .lblmr::placeholder {
+            color: white;
+        }
+    </style>
+
+
+
+
+
+
+
+       <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="w-full">
+
+            <div class="formbold-action-buttons">
+                <button class="formbold-action-btn open-button" style="z-index: 999;">
+                    <span class="formbold-cross-icon">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.474874 0.474874C1.10804 -0.158291 2.1346 -0.158291 2.76777 0.474874L16.5251 14.2322C17.1583 14.8654 17.1583 15.892 16.5251 16.5251C15.892 17.1583 14.8654 17.1583 14.2322 16.5251L0.474874 2.76777C-0.158291 2.1346 -0.158291 1.10804 0.474874 0.474874Z"
+                                fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.474874 16.5251C-0.158291 15.892 -0.158291 14.8654 0.474874 14.2322L14.2322 0.474874C14.8654 -0.158292 15.892 -0.158291 16.5251 0.474874C17.1583 1.10804 17.1583 2.1346 16.5251 2.76777L2.76777 16.5251C2.1346 17.1583 1.10804 17.1583 0.474874 16.5251Z"
+                                fill="white" />
+                        </svg>
+                    </span>
+                    <span class="formbold-chat-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.8333 14.0002V3.50016C19.8333 3.19074 19.7103 2.894 19.4915 2.6752C19.2728 2.45641 18.976 2.3335 18.6666 2.3335H3.49992C3.1905 2.3335 2.89375 2.45641 2.67496 2.6752C2.45617 2.894 2.33325 3.19074 2.33325 3.50016V19.8335L6.99992 15.1668H18.6666C18.976 15.1668 19.2728 15.0439 19.4915 14.8251C19.7103 14.6063 19.8333 14.3096 19.8333 14.0002ZM24.4999 7.00016H22.1666V17.5002H6.99992V19.8335C6.99992 20.1429 7.12284 20.4397 7.34163 20.6585C7.56042 20.8772 7.85717 21.0002 8.16659 21.0002H20.9999L25.6666 25.6668V8.16683C25.6666 7.85741 25.5437 7.56066 25.3249 7.34187C25.1061 7.12308 24.8093 7.00016 24.4999 7.00016Z"
+                                fill="white" />
+                        </svg>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div class="chat-popup">
+        <form class="form-container lbl11">
+            <h6 class="lblcross" onclick="closeForm2()">✕</h6>
+
+            <div class="chat-box">
+                <!-- Message bubble -->
+                <div class="message-bubble">
+                    <!-- <img src="https://i.ibb.co/2N0K7Bv/bot-avatar.png" alt="Bot" class="avatar"> -->
+                    <span>Hi, How Can I help You?</span>
+                </div>
+
+                <!-- Buttons as fake textarea -->
+                <div class="fake-textarea">
+                    <button type="button" onclick="submitPopupForm('Want to book plot in dholera')">
+                        Want to book plot in dholera
+                    </button>
+
+                    <button type="button"
+                        onclick="submitPopupForm('Want to know more about ongoing scheme in dholera')">
+                        Want to know more about ongoing scheme in dholera
+                    </button>
+
+                    <button type="button" onclick="submitPopupForm('Want to connect with sales team')">
+                        Want to connect with sales team
+                    </button>
+                </div>
+            </div>
+
+            <p class="lblp">
+                Powered by <span> <a href="https://www.goadsindia.com/" target="_blank" style="color:#ab853c;">&nbsp;
+                        Ads India</a></span>
+            </p>
+        </form>
+
+        <form id='webform223553000036407622' action='config.php' name=WebToContacts223553000036407622
+            class="form-container lbl44" method="post" name="form" id="form"
+            onSubmit='javascript:document.charset="UTF-8"; return checkMandatory223553000036407622()'
+            accept-charset='UTF-8'>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="lblcross1" onclick="backToPreviousFormlast()" style="cursor: pointer;">
+                    <i class="fa fa-arrow-left"></i>
+                </span>
+                <span class="lblcross" onclick="closeForm2()" style="cursor: pointer;">X</span>
+            </div>
+            <h3 class="lblh1" style="margin: 0px!important;">
+                <img src="assets/img/logo.png" alt="Indian Tradebird Logo12" style="margin-bottom: 10px;width: 145px;">
+            </h3>
+            <input type='text' style='display:none;' name='xnQsjsdp'
+                value='1c064f0e89b527f6af8258a6527a557646b1adc9e0497372b0ec48601e2dd57c'>
+            </input>
+            <input type='hidden' name='zc_gad' id='zc_gad' value=''>
+            </input>
+            <input type='text' style='display:none;' name='xmIwtLD'
+                value='3d142f1e6102acf0707c5b975647f20bfa6bcef0d45364ecb754a903b889cb2c1ff4c38ebd0f0eb43f756b0f937a8d32'>
+            </input>
+            <input type='text' style='display:none;' name='actionType' value='Q29udGFjdHM='>
+            </input>
+            <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;gapgroup.in&#x2f;'>
+            </input>
+            <!-- Do not remove this code. -->
+            <style>
+                html,
+                body {
+                    margin: 0px;
+                }
+
+                .formsubmit.zcwf_button {
+                    color: white !important;
+                    background: transparent linear-gradient(0deg, #000 0%, #000 100%);
+                }
+
+                #crmWebToEntityForm.zcwf_lblLeft {
+                    width: 100%;
+                    padding: 25px;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                }
+
+                #crmWebToEntityForm.zcwf_lblLeft * {
+                    box-sizing: border-box;
+                }
+
+                #crmWebToEntityForm {
+                    text-align: left;
+                }
+
+                #crmWebToEntityForm * {
+                    direction: ltr;
+                }
+
+                .zcwf_lblLeft .zcwf_title {
+                    word-wrap: break-word;
+                    padding: 0px 6px 10px;
+                    font-weight: bold
+                }
+
+                .zcwf_lblLeft.cpT_primaryBtn:hover {
+                    background: linear-gradient(#02acff 0, #006be4 100%)no-repeat padding-box !important;
+                    box-shadow: 0 -2px 0 0 #0159b9 inset !important;
+                    border: 0 !important;
+                    color: #fff !important;
+                    outline: 0 !important;
+                }
+
+                .zcwf_lblLeft .zcwf_col_fld input[ type=text],
+                input[ type=password],
+                .zcwf_lblLeft .zcwf_col_fld textarea {
+                    width: 60%;
+                    border: 1px solid #c0c6cc !important;
+                    resize: vertical;
+                    border-radius: 2px;
+                    float: left;
+                }
+
+                .zcwf_lblLeft .zcwf_col_lab {
+                    width: 30%;
+                    word-break: break-word;
+                    padding: 0px 6px 0px;
+                    margin-right: 10px;
+                    margin-top: 5px;
+                    float: left;
+                    min-height: 1px;
+                }
+
+                .zcwf_lblLeft .zcwf_col_fld {
+                    float: left;
+                    width: 68%;
+                    padding: 0px 6px 0px;
+                    position: relative;
+                    margin-top: 5px;
+                }
+
+                .zcwf_lblLeft .zcwf_privacy {
+                    padding: 6px;
+                }
+
+                .zcwf_lblLeft .wfrm_fld_dpNn {
+                    display: none;
+                }
+
+                .dIB {
+                    display: inline-block;
+                }
+
+                .zcwf_lblLeft .zcwf_col_fld_slt {
+                    width: 60%;
+                    border: 1px solid #ccc;
+                    background: #fff;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    float: left;
+                    resize: vertical;
+                    padding: 2px 5px;
+                }
+
+                .zcwf_lblLeft .zcwf_row:after,
+                .zcwf_lblLeft .zcwf_col_fld:after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .zcwf_lblLeft .zcwf_col_help {
+                    float: left;
+                    margin-left: 7px;
+                    font-size: 16px;
+                    max-width: 35%;
+                    word-break: break-word;
+                }
+
+                .zcwf_lblLeft .zcwf_help_icon {
+                    cursor: pointer;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    background: #fff;
+                    border: 1px solid #c0c6cc;
+                    color: #c1c1c1;
+                    text-align: center;
+                    font-size: 11px;
+                    line-height: 16px;
+                    font-weight: bold;
+                    border-radius: 50%;
+                }
+
+                .zcwf_lblLeft .zcwf_row {
+                    margin: 15px 0px;
+                }
+
+                .zcwf_lblLeft .formsubmit {
+                    margin-right: 5px;
+                    cursor: pointer;
+                    color: #313949;
+                    font-size: 16px;
+                }
+
+                .zcwf_lblLeft .zcwf_privacy_txt {
+                    width: 90%;
+                    color: rgb(0, 0, 0);
+                    font-size: 16px;
+                    font-family: Arial;
+                    display: inline-block;
+                    vertical-align: top;
+                    color: #313949;
+                    padding-top: 2px;
+                    margin-left: 6px;
+                }
+
+                .zcwf_lblLeft .zcwf_button {
+                    font-size: 16px;
+                    color: #313949;
+                    border: 1px solid #c0c6cc;
+                    padding: 3px 9px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    max-width: 120px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .zcwf_lblLeft .zcwf_tooltip_over {
+                    position: relative;
+                }
+
+                .zcwf_lblLeft .zcwf_tooltip_ctn {
+                    position: absolute;
+                    background: #dedede;
+                    padding: 3px 6px;
+                    top: 3px;
+                    border-radius: 4px;
+                    word-break: break-word;
+                    min-width: 100px;
+                    max-width: 150px;
+                    color: #313949;
+                    z-index: 100;
+                }
+
+                .zcwf_lblLeft .zcwf_ckbox {
+                    float: left;
+                }
+
+                .zcwf_lblLeft .zcwf_file {
+                    width: 55%;
+                    box-sizing: border-box;
+                    float: left;
+                }
+
+                .cBoth:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+
+                @media all and (max-width: 600px) {
+
+                    .zcwf_lblLeft .zcwf_col_lab,
+                    .zcwf_lblLeft .zcwf_col_fld {
+                        width: auto;
+                        float: none !important;
+                    }
+
+                    .zcwf_lblLeft .zcwf_col_help {
+                        width: 40%;
+                    }
+                }
+
+                .zcwf_row {
+                    padding: 6px 0px;
+                }
+            </style>
+            <style>
+                .zcwf_col_fld {
+                    display: flex;
+                    gap: 10px;
+                    /* space between buttons */
+                }
+
+                .zcwf_button {
+                    padding: 2px 17px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                #formsubmit {
+                    background-color: #28a745;
+                    /* green */
+                    color: white;
+                }
+
+                .zcwf_button[type="reset"],
+                input[name="reset"] {
+                    background-color: #000;
+                    /* red */
+                    color: white;
+                }
+            </style>
+
+            <!-- First Name hidden -->
+            <!-- First Name (hidden) -->
+            <form action="config.php" method="POST" id="popupForm">
+
+                <input type="hidden" name="btn_action" id="btn_action" value="">
+                <input type="hidden" name="ctype" id="ctype" value="I1114">
+
+                <!-- Name -->
+                <div class='zcwf_row'>
+                    <div class='zcwf_col_fld'>
+                        <input type='text' name='name' maxlength='80' placeholder='Name *' required
+                            pattern="[A-Za-z\s]+" title="Only letters allowed">
+                    </div>
+                </div>
+
+                <!-- Email (changed to "mail") -->
+                <div class='zcwf_row'>
+                    <div class='zcwf_col_fld'>
+                        <input type='email' id="mail" name="mail" maxlength='100' placeholder='Email *' required>
+                    </div>
+                </div>
+
+                <!-- Phone (changed to "subj") -->
+                <div class='zcwf_row'>
+                    <div class='zcwf_col_fld'>
+                        <input type='text' id="subj" name="subj" maxlength='10' placeholder='Phone *' required
+                            pattern="\d{10}" title="Enter 10 digit phone number">
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class='zcwf_row'>
+                    <div class='zcwf_col_fld'>
+                        <textarea name='message' placeholder='Message *' required></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class='zcwf_row'>
+                    <div class='zcwf_col_fld'>
+                        <input type='submit' id='formsubmit1' class='formsubmit zcwf_button' value='Submit'>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <script>
+                function validateEmail223553000036407622() {
+                    var form = document.forms['WebToContacts223553000036407622'];
+                    var emailFld = form.querySelectorAll('[ftype=email]');
+                    var i;
+                    for (i = 0; i < emailFld.length; i++) {
+                        var emailVal = emailFld[i].value;
+                        if ((emailVal.replace(/^\s+|\s+$/g, '')).length != 0) {
+                            var atpos = emailVal.indexOf('@');
+                            var dotpos = emailVal.lastIndexOf('.');
+                            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+                                alert('Please enter a valid email address. ');
+                                emailFld[i].focus();
+                                return false;
+                            }
+                        }
+                    }
+                    return true;
+                }
+                function checkMandatory223553000036407622() {
+                    var mndFileds = new Array('Last Name');
+                    var fldLangVal = new Array('Last\x20Name');
+                    for (i = 0; i < mndFileds.length; i++) {
+                        var fieldObj = document.forms['WebToContacts223553000036407622'][mndFileds[i]];
+                        if (fieldObj) {
+                            if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                                if (fieldObj.type == 'file') {
+                                    alert('Please select a file to upload.');
+                                    fieldObj.focus();
+                                    return false;
+                                }
+                                alert(fldLangVal[i] + ' cannot be empty.');
+                                fieldObj.focus();
+                                return false;
+                            }
+                            else if (fieldObj.nodeName == 'SELECT') {
+                                if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+                                    alert(fldLangVal[i] + ' cannot be none.');
+                                    fieldObj.focus();
+                                    return false;
+                                }
+                            }
+                            else if (fieldObj.type == 'checkbox') {
+                                if (fieldObj.checked == false) {
+                                    alert('Please accept  ' + fldLangVal[i]);
+                                    fieldObj.focus();
+                                    return false;
+                                }
+                            }
+                            try {
+                                if (fieldObj.name == 'Last Name') {
+                                    name = fieldObj.value;
+                                }
+                            }
+                            catch (e) { }
+                        }
+                    }
+                    if (!validateEmail223553000036407622()) {
+                        return false;
+                    }
+                    var urlparams = new URLSearchParams(window.location.search);
+                    if (urlparams.has('service') && (urlparams.get('service') === 'smarturl')) {
+                        var webform = document.getElementById('webform223553000036407622');
+                        var service = urlparams.get('service');
+                        var smarturlfield = document.createElement('input');
+                        smarturlfield.setAttribute('type', 'hidden');
+                        smarturlfield.setAttribute('value', service);
+                        smarturlfield.setAttribute('name', 'service');
+                        webform.appendChild(smarturlfield);
+                    }
+                    document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+                }
+                function tooltipShow223553000036407622(el) {
+                    var tooltip = el.nextElementSibling;
+                    var tooltipDisplay = tooltip.style.display;
+                    if (tooltipDisplay == 'none') {
+                        var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                        for (i = 0; i < allTooltip.length; i++) {
+                            allTooltip[i].style.display = 'none';
+                        }
+                        tooltip.style.display = 'block';
+                    }
+                    else {
+                        tooltip.style.display = 'none';
+                    }
+                }
+            </script>
+            <!-- Do not remove this --- Analytics Tracking code starts -->
+
+            <!-- Do not remove this --- Analytics Tracking code ends. -->
+        </form>
+
+
+
+
+    </div>
+    <script>
+        function backToPreviousForm() {
+            // Hide all popup forms
+            document.querySelectorAll('.form-container').forEach(el => el.style.display = 'none');
+
+            // Show lbl11 form (chat box)
+            const form = document.querySelector('.lbl11');
+            if (form) form.style.display = 'block';
+        }
+    </script>
+    <script>
+        function backToPreviousFormlast() {
+            // Hide all popup forms
+            document.querySelectorAll('.form-container').forEach(el => el.style.display = 'none');
+
+            // Show lbl11 form (chat box)
+            const form = document.querySelector('.lbl11');
+            if (form) form.style.display = 'block';
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
+            const el = document.querySelector(".intro-text");
+
+            if (!el) return; // Exit if element not found
+
+            el.textContent = "";
+            let i = 0;
+
+            const interval = setInterval(() => {
+                el.textContent += text[i];
+                i++;
+                if (i === text.length) clearInterval(interval);
+            }, 50);
+        });
+    </script>
+
+    <script>
+        function openPopupForm(className) {
+            document.querySelectorAll('.form-container').forEach(function (form) {
+                form.style.display = 'none';
+            });
+
+            const target = document.querySelector('.' + className);
+            if (target) {
+                target.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdown = document.getElementById("chatDropdown");
+
+            if (dropdown) {
+                dropdown.addEventListener("change", function () {
+                    const selectedForm = this.value;
+
+                    // Hide all forms first
+                    document.querySelectorAll(".form-container").forEach(form => {
+                        form.style.display = "none";
+                    });
+
+                    // Show the selected form
+                    if (selectedForm) {
+                        const selectedFormElement = document.querySelector("." + selectedForm);
+                        if (selectedFormElement) {
+                            selectedFormElement.style.display = "block";
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textarea = document.querySelector(".textarea-container textarea");
+            const chatForm = document.querySelector(".form-container.lbl11");
+            const emailForm = document.querySelector(".form-container:not(.lbl11)");
+
+            // Check if textarea exists before adding event listener
+            if (textarea) {
+                textarea.addEventListener("keypress", function (event) {
+                    if (event.key === "Enter" && !event.shiftKey) {
+                        event.preventDefault(); // Prevents new line
+                        if (chatForm) chatForm.style.display = "none";
+                        if (emailForm) emailForm.style.display = "block";
+                    }
+                });
+            }
+        });
+
+        function closeForm2() {
+            document.querySelectorAll(".form-container").forEach(form => {
+                form.style.display = "none";
+            });
+        }
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sendIcon = document.querySelector(".send-icon");
+            const chatForm = document.querySelector(".form-container.lbl11");
+            const emailForm = document.querySelector(".form-container.lbl44");
+            const emailForm22 = document.querySelector(".form-container.lbl22");
+
+            if (sendIcon) {
+                sendIcon.addEventListener("click", function () {
+                    if (chatForm) chatForm.style.display = "none";
+                    if (emailForm) emailForm.style.display = "block";
+                    if (emailForm22) emailForm22.style.display = "block";
+                });
+            }
+        });
+
+        function closeForm2() {
+            document.querySelectorAll(".form-container").forEach(form => {
+                form.style.display = "none";
+            });
+        }
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textarea = document.querySelector(".textarea-container textarea");
+            const sendIcon = document.querySelector(".send-icon");
+            const chatForm = document.querySelector(".form-container.lbl11"); // Chat form
+            const emailForm = document.querySelector(".form-container.lbl44"); // Email form
+            const emailForm22 = document.querySelector(".form-container.lbl22"); // Email form
+
+            // Only run if all required elements exist
+            if (textarea && sendIcon) {
+                // Disable send icon initially
+                sendIcon.style.opacity = "0.5";
+                sendIcon.style.pointerEvents = "none";
+
+                // Enable send icon when there is text
+                textarea.addEventListener("input", function () {
+                    if (textarea.value.trim() !== "") {
+                        sendIcon.style.opacity = "1";
+                        sendIcon.style.pointerEvents = "auto";
+                    } else {
+                        sendIcon.style.opacity = "0.5";
+                        sendIcon.style.pointerEvents = "none";
+                    }
+                });
+
+                // Handle send icon click
+                sendIcon.addEventListener("click", function () {
+                    if (textarea.value.trim() !== "") {
+                        if (chatForm) chatForm.style.display = "none";
+                        if (emailForm) emailForm.style.display = "block";
+                        if (emailForm22) emailForm22.style.display = "block";
+                    }
+                });
+            }
+        });
+
+        function closeForm2() {
+            document.querySelectorAll(".form-container").forEach(form => {
+                form.style.display = "none";
+            });
+        }
+    </script>
+
+
+    <script>
+        function showForm(formToShow) {
+            var form1 = document.querySelector(".lbl11");
+            var form2 = document.querySelector(".lbl22");
+            var form3 = document.querySelector(".lbl33");
+            var form4 = document.querySelector(".lbl44");
+
+            form1 && (form1.style.display = "none");
+            form2 && (form2.style.display = "none");
+            form3 && (form3.style.display = "none");
+            form4 && (form4.style.display = "none");
+
+            if (formToShow === "lbl11") form1 && (form1.style.display = "block");
+            else if (formToShow === "lbl22") form2 && (form2.style.display = "block");
+            else if (formToShow === "lbl33") form3 && (form3.style.display = "block");
+            else if (formToShow === "lbl44") form4 && (form4.style.display = "block");
+        }
+
+        function closeForm2() {
+            var popup = document.querySelector(".chat-popup");
+            if (popup) popup.style.display = "none";
+        }
+
+        // Show popup on phone icon click and open lbl44 form
+        const phoneIcons = document.querySelectorAll("li i.fa-phone, li i.fas.fa-phone, li i.fa.fa-phone");
+        phoneIcons.forEach(icon => {
+            const link = icon.nextElementSibling;
+            if (link && link.tagName === 'A') {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const popup = document.querySelector(".chat-popup");
+                    if (popup) popup.style.display = "block";
+                    showForm("lbl33");
+                });
+            }
+        });
+
+        // If needed: other handlers for other icons
+        const emailIcons = document.querySelectorAll("li i.fas.fa-envelope-open, li i.lblemail");
+        emailIcons.forEach(icon => {
+            const link = icon.nextElementSibling;
+            if (link && link.tagName === 'A') {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const popup = document.querySelector(".chat-popup");
+                    if (popup) popup.style.display = "block";
+                    showForm("lbl33");
+                });
+            }
+        });
+
+        const openBtn = document.querySelector(".open-button");
+        if (openBtn) {
+            openBtn.addEventListener("click", function () {
+                const popup = document.querySelector(".chat-popup");
+                if (popup) popup.style.display = "block";
+                showForm("lbl11");
+            });
+        }
+    </script>
+
+
+    <!-- Email code start-->
+    <script>
+        function toggleFields(event) {
+            event.preventDefault();
+            var fields = document.getElementById('additionalFields');
+            if (fields.style.display === 'none') {
+                fields.style.display = 'block';
+            } else {
+                fields.style.display = 'none';
+            }
+        }
+
+        function closeForm1() {
+            // Add your close form logic here
+        }
+    </script>
+    <!-- Email code end-->
+
+    <script>
+        function toggleOtherFields(event) {
+            event.preventDefault(); // Prevent the default action of the link
+            var otherFields = document.getElementById('other-fields');
+            if (otherFields.style.display === "none") {
+                otherFields.style.display = "block";
+            } else {
+                otherFields.style.display = "none";
+            }
+        }
+
+        function closeForm2() {
+            document.querySelector('.form-container').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        function closeForm2() {
+            document.querySelector(".chat-popup").style.display = "none";
+        }
+    </script>
+
+    <script>
+        function selectCategoryAndOpenForm(categoryName) {
+            const input = document.getElementById('selected_category');
+            if (input) {
+                input.value = categoryName;
+            }
+
+            // Show the second form — you must already have this function
+            openPopupForm('lbl44');
+        }
+    </script>
+
+    <script src="assets/jquery/jquery-min-3.6.0.js"></script>
+
+    <script src="assets/jquery/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/jquery/slick.min.js"></script>
+
+    <script src="assets/jquery/all.min.js"></script>
+
+    <script src="assets/jquery/custom.js"></script>
+
+    <script src="assets/jquery/color_scheme.js"></script>
+
+    <script>
+        $(document).ready(function() {
+  let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+
+  faqQuestionContainers.forEach(function(faqQuestionContainer) {
+    faqQuestionContainer.onclick = function() {
+      this.parentElement.classList.toggle("active");
+    };
+  });
+})
+    </script>
+
+
+    <script>
+        function submitPopupForm(actionText) {
+            // Set hidden input value
+            document.getElementById('btn_action').value = actionText;
+
+            // Popup open karavanu (tamaru existing code)
+            openPopupForm('lbl44');
+        }
+    </script>
+
+</body>
+
+</html>
